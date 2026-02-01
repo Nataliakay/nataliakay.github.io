@@ -1,95 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Booking Request | Natalia Kay</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Private Booking | Natalia Kay</title>
 
-  <!-- EmailJS -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script>
-    (function(){
-      emailjs.init("KBpqTmbBWj9Rh0x0X");
-    })();
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
 
-  <!-- Your existing CSS -->
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background-color: #fde8f1;
+      color: #3b2c35;
+    }
+
+    nav {
+      background: #ffffff;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #b86b8c;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 70px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+      color: #b86b8c;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      text-align: center;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 50px;
+    }
+
+    .box {
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 16px;
+      margin-bottom: 40px;
+    }
+
+    .rates-list p {
+      margin: 10px 0;
+      font-size: 1.05rem;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+    }
+
+    .checkbox {
+      margin-top: 20px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    button {
+      margin-top: 30px;
+      width: 100%;
+      padding: 16px;
+      background: #b86b8c;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #f5c1d9;
+      padding: 35px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 
 <body>
 
 <nav>
   <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="rates.html">Rates</a>
   <a href="gallery.html">Gallery</a>
+  <a href="rates.html">Arrangements</a>
+  <a href="booking.html">Book</a>
 </nav>
 
-<section class="booking-section">
-  <h2>Booking Request</h2>
+<section>
+  <h1>Private Booking Request</h1>
 
-  <form id="booking-form">
+  <p class="intro">
+    Thank you for your interest in a private arrangement.
+    I welcome serious, respectful inquiries from discerning gentlemen
+    seeking a refined and memorable experience.
+    <br><br>
+    All engagements are by appointment only and confirmed upon receipt of a donation.
+  </p>
 
-    <label>Full Name</label>
-    <input type="text" name="name" required>
+  <div class="box">
+    <h3>Available Arrangements</h3>
+    <div class="rates-list">
+      <p><strong>One Hour</strong> — 600</p>
+      <p><strong>Dinner Date</strong> (3 hours) — 1,500</p>
+      <p><strong>Overnight</strong> — 3,500</p>
+      <p><strong>Twelve Hours</strong> — 6,500</p>
+      <br>
+      <p><strong>Fly Me To You — United States</strong> (6 hours) — 5,000</p>
+      <p><strong>International Engagements</strong> (12 hours) — 10,000</p>
+    </div>
+  </div>
 
-    <label>Email Address</label>
-    <input type="email" name="email" required>
+  <div class="box">
+    <h3>Deposit & Confirmation</h3>
+    <p>
+      A <strong>25% donation</strong> is required to secure our time together.
+      Appointments are not confirmed without receipt of the donation.
+    </p>
 
-    <label>Preferred City / State / Country</label>
-    <input type="text" name="location" placeholder="City, State, Country" required>
+    <p style="text-align: center; font-weight: bold; letter-spacing: 1px; margin-top: 20px;">
+      Venmo · PayPal · Zelle
+    </p>
+  </div>
 
-    <label>Service Requested</label>
-    <select name="service" required>
-      <option>Dinner Date — 3 Hours (1500)</option>
-      <option>Private Arrangement — 1 Hour (600)</option>
-      <option>Overnight (3500)</option>
-      <option>Fly Me To You — US (6 Hours / 5000)</option>
-      <option>Fly Me To You — International (12 Hours / 10000)</option>
-    </select>
+  <div class="box">
+    <h3>Cancellation Policy</h3>
+    <p>
+      Any cancellation made after confirmation will result in a
+      <strong>50% forfeiture of the donation</strong>.
+      This policy ensures respect for time, preparation, and discretion.
+    </p>
+  </div>
+
+  <div class="box">
+    <h3>Private Inquiry Form</h3>
+
+    <label>Name</label>
+    <input type="text">
+
+    <label>Email</label>
+    <input type="email">
+
+    <label>Preferred Location</label>
+    <input type="text" placeholder="City, State, or Country">
 
     <label>Preferred Date</label>
-    <input type="date" name="date" required>
+    <input type="date">
 
-    <label>Additional Details</label>
-    <textarea name="message" rows="4" placeholder="Tell me a little about your request"></textarea>
+    <div class="checkbox">
+      <input type="checkbox">
+      I understand a 25% donation is required to confirm an appointment and acknowledge the cancellation policy.
+    </div>
 
-    <p class="policy">
-      A <strong>25% deposit</strong> is required to confirm all bookings.<br>
-      Cancellations require <strong>48 hours notice</strong> or a <strong>50% deposit is retained</strong>.
-    </p>
-
-    <p class="payments">
-      Accepted payments: Venmo · PayPal · Zelle
-    </p>
-
-    <button type="submit">Submit Booking Request</button>
-
-  </form>
+    <button>Submit Private Inquiry</button>
+  </div>
 </section>
 
 <footer>
-  <p>Discretion always respected.</p>
+  Discreet · Elegant · Private
 </footer>
-
-<script>
-document.getElementById("booking-form").addEventListener("submit", function(e){
-  e.preventDefault();
-
-  emailjs.sendForm(
-    "service_o2vdend",
-    "template_jgdwjfi",
-    this
-  ).then(function(){
-    alert("Your booking request has been sent 🤍");
-    document.getElementById("booking-form").reset();
-  }, function(error){
-    alert("Something went wrong. Please try again.");
-    console.log(error);
-  });
-});
-</script>
 
 </body>
 </html>
