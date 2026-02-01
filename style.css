@@ -160,3 +160,62 @@ button {
 #arrangements h2 {
   color: #b86b8c;
 }
+/* ===== RATES PAGE FIX ===== */
+
+#arrangements {
+  background-color: #fde8f1;
+  padding: 70px 20px;
+}
+
+#arrangements h2 {
+  text-align: center;
+  color: #b86b8c;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 40px;
+}
+
+/* Grid layout */
+.rates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Individual cards */
+.rate-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(184, 107, 140, 0.15);
+}
+
+.rate-card h3 {
+  color: #b86b8c;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #3b2c35;
+}
+
+.details {
+  margin-top: 6px;
+  font-size: 1rem;
+  color: #6b4b59;
+}
+
+/* Footnote */
+.rates-footnote {
+  max-width: 700px;
+  margin: 35px auto 0;
+  text-align: center;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #6b4b59;
+}
