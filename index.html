@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Kay | Private Arrangements</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font -->
+  <!-- Elegant font -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
 
   <style>
@@ -14,111 +14,121 @@
       font-family: 'Playfair Display', serif;
       background-color: #fff;
       color: #2b2b2b;
+      line-height: 1.6;
     }
 
-    header {
-      background: url('images/hero.jpg') center/cover no-repeat;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    nav {
+      padding: 20px;
       text-align: center;
-      color: white;
+      background: #f6e9f1;
     }
 
-    header h1 {
-      font-size: 3rem;
-      background: rgba(0,0,0,0.4);
-      padding: 20px 30px;
-      border-radius: 8px;
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #b87aa6;
+      font-weight: 500;
     }
 
     section {
-      padding: 60px 20px;
       max-width: 900px;
-      margin: auto;
-    }
-
-    h2 {
+      margin: 60px auto;
+      padding: 0 20px;
       text-align: center;
-      margin-bottom: 30px;
-      color: #c48ab3;
     }
 
-    .about {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
+    h1, h2 {
+      color: #b87aa6;
     }
 
-    .about img {
+    img {
       width: 100%;
-      max-width: 400px;
-      border-radius: 10px;
+      max-width: 500px;
+      border-radius: 12px;
+      margin: 30px 0;
     }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 10px;
+    .soft {
+      color: #555;
+      font-style: italic;
     }
 
     footer {
-      text-align: center;
+      background: #f6e9f1;
       padding: 40px 20px;
-      background-color: #f8f1f5;
+      text-align: center;
     }
 
     .socials a {
       margin: 0 10px;
       text-decoration: none;
-      color: #c48ab3;
-      font-weight: bold;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
+      color: #b87aa6;
+      font-weight: 500;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <header>
-    <h1>Kay<br>Private Arrangements</h1>
-  </header>
+  <!-- NAV -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#arrangements">Arrangements</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Private Inquiry</a>
+  </nav>
+
+  <!-- HERO IMAGE -->
+  <section>
+    <img src="images/hero.jpg" alt="Kay – Private Arrangements">
+    <h1>Kay</h1>
+    <p class="soft">Private Arrangements for Discerning Gentlemen</p>
+  </section>
 
   <!-- ABOUT -->
-  <section>
+  <section id="about">
     <h2>About Me</h2>
-    <div class="about">
-      <img src="images/about.jpg" alt="Kay – Private Arrangements">
-      <p>
-        Based primarily in <strong>Las Vegas</strong> and the <strong>Washington DC / VA area</strong>, I cater to discerning gentlemen seeking discreet, refined companionship.
-        <br><br>
-        Available for date nights, dinner engagements, travel companionship, and fly-me-to-you arrangements.
-        Passport ready, adaptable, and often available on short notice.
-        <br><br>
-        Serious inquiries only.
-      </p>
-    </div>
+    <img src="images/about.jpg" alt="About Kay">
+    <p>
+      I am based primarily in <strong>Las Vegas</strong> and the
+      <strong>Washington DC / VA area</strong>, and I travel frequently for private engagements.
+      <br><br>
+      Available for date nights, dinner engagements, travel companionship,
+      fly-me-to-you arrangements, and extended stays.
+      Passport ready and often available on short notice.
+    </p>
+  </section>
+
+  <!-- ARRANGEMENTS -->
+  <section id="arrangements">
+    <h2>Private Arrangements</h2>
+    <p>
+      Discreet companionship curated for professionals, executives, and military gentlemen.
+      <br><br>
+      A <strong>25% deposit</strong> is required to secure our time together.
+      No deposit, no appointment.
+    </p>
+    <p class="soft">
+      Serious inquiries only. Mutual respect is expected.
+    </p>
   </section>
 
   <!-- GALLERY -->
-  <section>
+  <section id="gallery">
     <h2>Gallery</h2>
-    <div class="gallery">
-      <img src="images/gallery.jpg" alt="Kay Gallery Image">
-    </div>
+    <img src="images/gallery.jpg" alt="Kay Gallery">
+  </section>
+
+  <!-- CONTACT (PREP FOR BOOKING FORM) -->
+  <section id="contact">
+    <h2>Private Inquiry</h2>
+    <p>
+      For discretion, direct contact details are shared
+      <strong>after confirmation</strong>.
+      <br><br>
+      Approved inquiries receive a formal confirmation email outlining
+      deposit instructions and next steps.
+    </p>
   </section>
 
   <!-- FOOTER -->
@@ -127,7 +137,7 @@
       <a href="https://instagram.com/nataliakayxoxo" target="_blank">Instagram</a>
       <a href="https://onlyfans.com/nataliakayxxx" target="_blank">OnlyFans</a>
     </div>
-    <p style="margin-top:20px;">© Kay | Private Arrangements</p>
+    <p class="soft" style="margin-top:20px;">© Kay | Private Arrangements</p>
   </footer>
 
 </body>
