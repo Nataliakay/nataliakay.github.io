@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Experience Natalia XO</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Natalia Kay | Private Arrangements</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      font-family: 'Playfair Display', serif;
-      background: #fde8f1;
+      font-family: 'Playfair Display', cursive;
+      background-color: #fde8f1;
       color: #3b2c35;
     }
 
@@ -31,8 +31,9 @@
     }
 
     header {
-      background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-                  url("hero.jpg");
+      background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("hero.jpg.JPG");
       background-size: cover;
       background-position: center;
       height: 90vh;
@@ -43,10 +44,19 @@
       color: white;
     }
 
+    header h1 {
+      font-size: 3.5rem;
+    }
+
+    header p {
+      font-style: italic;
+      font-size: 1.3rem;
+    }
+
     section {
+      padding: 70px 20px;
       max-width: 900px;
       margin: auto;
-      padding: 70px 20px;
     }
 
     h2 {
@@ -54,23 +64,71 @@
       color: #b86b8c;
     }
 
-    img {
+    .about img {
       width: 100%;
       border-radius: 15px;
       margin-top: 30px;
     }
 
-    .rates, .booking {
+    /* GALLERY */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    .rates {
       background: white;
-      padding: 30px;
+      padding: 35px;
       border-radius: 15px;
       text-align: center;
+    }
+
+    .booking-box {
+      background: white;
+      padding: 35px;
+      border-radius: 15px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 15px;
+      background: #b86b8c;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
     }
 
     footer {
       background: #f5c1d9;
       padding: 30px;
       text-align: center;
+    }
+
+    footer a {
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #3b2c35;
     }
   </style>
 </head>
@@ -79,46 +137,87 @@
 
 <nav>
   <a href="#about">About</a>
+  <a href="#arrangements">Private Arrangements</a>
   <a href="#gallery">Gallery</a>
   <a href="#book">Book</a>
 </nav>
 
 <header>
   <div>
-    <h1>Natalia XO</h1>
+    <h1>Natalia Kay</h1>
     <p>Discreet · Elegant · Unforgettable</p>
   </div>
 </header>
 
-<section id="about">
+<section id="about" class="about">
   <h2>About Me</h2>
-  <img src="about.jpg" alt="About Natalia">
+  <img src="about.jpg.JPG" alt="Natalia Kay">
+
   <p>
-    Based in Las Vegas and Washington DC / VA.
-    Offering refined private arrangements worldwide.
+    Based in <strong>Las Vegas</strong> and the <strong>Washington DC / VA area</strong>,
+    I offer refined private arrangements for discerning gentlemen worldwide.
   </p>
+
+  <p>
+    Date nights, dinner engagements, fly-me-to-you experiences.
+    Passport ready. Short-notice friendly.
+  </p>
+</section>
+
+<section id="arrangements">
+  <h2>Private Arrangements</h2>
+  <div class="rates">
+    <p><strong>One Hour</strong> — 600</p>
+    <p><strong>Overnight</strong> — 3500</p>
+    <p><strong>Twelve Hours</strong> — 6500</p>
+    <p style="font-style: italic;">25% deposit required</p>
+  </div>
 </section>
 
 <section id="gallery">
   <h2>Gallery</h2>
-  <img src="gallery.jpg">
-  <img src="gallery2.jpg">
-  <img src="gallery3.jpg">
+
+  <div class="gallery-grid">
+    <img src="gallery.jpg.JPG" alt="Natalia Kay gallery image 1">
+    <img src="gallery2.jpg.JPG" alt="Natalia Kay gallery image 2">
+    <img src="gallery3.jpg.JPG" alt="Natalia Kay gallery image 3">
+  </div>
 </section>
 
 <section id="book">
-  <h2>Private Arrangements</h2>
-  <div class="rates">
-    <p>One Hour — 600</p>
-    <p>Overnight — 3500</p>
-    <p>Twelve Hours — 6500</p>
-    <p><em>25% deposit required</em></p>
+  <h2>Booking Request</h2>
+  <div class="booking-box">
+    <label>Name</label>
+    <input type="text">
+
+    <label>Email</label>
+    <input type="email">
+
+    <label>Preferred City</label>
+    <select>
+      <option>Las Vegas</option>
+      <option>Washington DC / VA</option>
+      <option>Other</option>
+    </select>
+
+    <label>Preferred Date</label>
+    <input type="date">
+
+    <label>
+      <input type="checkbox"> I understand a 25% deposit is required
+    </label>
+
+    <button>Submit Inquiry</button>
   </div>
 </section>
 
 <footer>
   <p>Connect discreetly</p>
-  <p>Instagram · OnlyFans · WhatsApp</p>
+  <a href="https://instagram.com/nataliakayxoxo" target="_blank">Instagram</a>
+  <a href="https://onlyfans.com/nataliakayxxx" target="_blank">OnlyFans</a>
+  <a href="https://wa.me/17027505631" target="_blank">WhatsApp</a>
+
+  <p style="font-size: 0.9rem;">Venmo · PayPal · Zelle</p>
 </footer>
 
 </body>
