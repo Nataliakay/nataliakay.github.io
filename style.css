@@ -1,166 +1,84 @@
-body {
-  margin: 0;
-  font-family: 'Playfair Display', serif;
+/* ===== RATES SECTION ===== */
+
+#rates {
   background-color: #fde8f1;
-  color: #3b2c35;
-}
-
-/* NAVIGATION */
-nav {
-  background: #ffffff;
-  padding: 15px;
+  padding: 90px 20px;
   text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  font-family: 'Playfair Display', serif;
 }
 
-nav a {
-  margin: 0 18px;
-  text-decoration: none;
+#rates h2 {
   color: #b86b8c;
-  font-weight: bold;
+  margin-bottom: 55px;
+  font-size: 2.2rem;
   letter-spacing: 1px;
 }
 
-/* HERO */
-header {
-  background:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url("hero.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 85vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
-
-header h1 {
-  font-size: 3.6rem;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-style: italic;
-  font-size: 1.3rem;
-}
-
-/* SECTIONS */
-section {
-  padding: 70px 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-h2 {
-  text-align: center;
-  color: #b86b8c;
-  margin-bottom: 35px;
-  letter-spacing: 1px;
-}
-
-/* IMAGES */
-img {
-  width: 100%;
-  border-radius: 16px;
-}
-
-/* ABOUT */
-.about img {
-  margin-bottom: 30px;
-}
-
-/* GALLERY */
-.gallery-grid {
+.rates-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+  max-width: 950px;
+  margin: 0 auto;
 }
 
-/* RATES & BOOKING */
-.rates-box,
-.booking-box {
-  background: white;
-  padding: 35px;
-  border-radius: 16px;
-  text-align: center;
+.rate-card {
+  background: #ffffff;
+  padding: 45px 35px;
+  border-radius: 20px;
+  box-shadow: 0 14px 35px rgba(184, 107, 140, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.rates-box p {
-  font-size: 1.1rem;
-  margin: 12px 0;
+.rate-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 45px rgba(184, 107, 140, 0.3);
 }
 
-/* FORM */
-label {
-  display: block;
-  margin-top: 18px;
-  font-weight: bold;
+.rate-card h3 {
+  color: #b86b8c;
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+  letter-spacing: 0.6px;
 }
 
-input,
-select {
-  width: 100%;
-  padding: 12px;
-  margin-top: 6px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-.checkbox {
-  margin-top: 20px;
-  font-size: 0.95rem;
-}
-
-/* BUTTON */
-button {
-  margin-top: 28px;
-  width: 100%;
-  padding: 15px;
-  background: #b86b8c;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  font-size: 1.1rem;
-  cursor: pointer;
+.rate-card .price {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #3b2c35;
+  margin: 14px 0;
   letter-spacing: 1px;
 }
 
-button:hover {
-  background: #a25877;
+.rate-card .details {
+  font-size: 0.95rem;
+  color: #6a4a58;
+  line-height: 1.6;
 }
 
-/* FOOTER */
-footer {
-  background: #f5c1d9;
-  padding: 35px;
-  text-align: center;
+.rates-footnote {
+  max-width: 720px;
+  margin: 50px auto 0;
+  font-size: 0.95rem;
+  color: #6a4a58;
+  line-height: 1.7;
 }
 
-footer a {
-  margin: 0 12px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #3b2c35;
-}
-
-/* PAYMENT ICONS */
-.social-icons svg {
-  width: 40px;
-  margin: 0 10px;
-  fill: #3b2c35;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2.6rem;
+/* Mobile refinement */
+@media (max-width: 600px) {
+  #rates {
+    padding: 70px 18px;
   }
 
-  .gallery-grid {
-    grid-template-columns: 1fr;
+  #rates h2 {
+    font-size: 1.9rem;
+  }
+
+  .rate-card {
+    padding: 35px 26px;
+  }
+
+  .rate-card .price {
+    font-size: 1.7rem;
   }
 }
