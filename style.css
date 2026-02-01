@@ -150,3 +150,13 @@ button {
   color: #3b2c35;
   text-align: center;
 }
+/* ===== FIX ARRANGEMENTS BACKGROUND ===== */
+
+#arrangements {
+  background-color: #fde8f1;
+  padding: 80px 20px;
+}
+
+#arrangements h2 {
+  color: #b86b8c;
+}
