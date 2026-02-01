@@ -5,47 +5,225 @@
   <title>Natalia Kay</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Elegant cursive font -->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Great+Vibes&display=swap');
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
 
+  <style>
     body {
       margin: 0;
-      padding: 0;
       background: #140b10;
-      color: #f6e9ef;
-      text-align: center;
+      color: #f7e9ef;
+      font-family: "Playfair Display", serif;
       letter-spacing: 0.4px;
     }
 
-    .container {
-      max-width: 720px;
+    section {
+      padding: 90px 22px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 110px 22px;
+      text-align: center;
     }
 
     h1 {
       font-family: "Great Vibes", cursive;
-      font-size: 4em;
-      font-weight: 400;
+      font-size: 4.2em;
+      color: #f2b6c6;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-family: "Great Vibes", cursive;
+      font-size: 2.6em;
       color: #f2b6c6;
       margin-bottom: 30px;
     }
 
     p {
-      font-family: "Playfair Display", serif;
-      font-size: 1.1em;
+      font-size: 1.05em;
       line-height: 1.8;
-      opacity: 0.9;
-      margin-bottom: 55px;
+      opacity: 0.92;
+      max-width: 700px;
+      margin: 0 auto 25px;
     }
 
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: #f2b6c6;
+      margin: 40px auto;
+      opacity: 0.6;
+    }
+
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 40px;
+    }
+
+    .gallery div {
+      height: 300px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 10px;
+    }
+
+    /* Services */
+    .services p {
+      margin-bottom: 12px;
+    }
+
+    /* FAQ */
+    .faq p {
+      margin-bottom: 18px;
+    }
+
+    /* Form */
     form {
-      margin-top: 20px;
+      max-width: 500px;
+      margin: 40px auto 0;
     }
 
     input, textarea {
       width: 100%;
-      padding: 14px 16px;
-      margin-bottom: 18px;
-      background: rgba(255,
+      padding: 14px;
+      margin-bottom: 16px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(242,182,198,0.4);
+      color: #fff;
+      border-radius: 8px;
+      font-family: "Playfair Display", serif;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #e6b7c6;
+    }
+
+    textarea {
+      min-height: 140px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 42px;
+      background: linear-gradient(135deg, #f2b6c6, #e39aad);
+      color: #2b0f18;
+      border-radius: 999px;
+      border: none;
+      font-size: 0.95em;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    /* Socials */
+    .socials a {
+      margin: 0 12px;
+      color: #f2b6c6;
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 50px 20px;
+      font-size: 0.75em;
+      opacity: 0.5;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- A) HERO -->
+  <section>
+    <h1>Natalia Kay</h1>
+    <p>
+      Elegant, discreet companionship for those who value presence,
+      intimacy, and refined connection.
+    </p>
+    <div class="divider"></div>
+    <p>By private inquiry only.</p>
+  </section>
+
+  <!-- B) GALLERY -->
+  <section>
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <p style="margin-top:20px; font-size:0.9em; opacity:0.7;">
+      Photos shared privately upon request
+    </p>
+  </section>
+
+  <!-- C) ABOUT -->
+  <section>
+    <h2>About Me</h2>
+    <p>
+      I offer an experience rooted in elegance, warmth, and genuine presence.
+      My time is curated, unhurried, and designed to feel natural and indulgent.
+    </p>
+    <p>
+      I value discretion, respect, and meaningful connection above all else.
+    </p>
+  </section>
+
+  <!-- D) SERVICES -->
+  <section class="services">
+    <h2>Experiences</h2>
+    <p>• Dinner & social engagements</p>
+    <p>• Intimate private companionship</p>
+    <p>• Travel & extended arrangements</p>
+    <p>• Bespoke experiences upon request</p>
+  </section>
+
+  <!-- E) FAQ -->
+  <section class="faq">
+    <h2>FAQ</h2>
+    <p><strong>How do I inquire?</strong><br>Via the form below or WhatsApp.</p>
+    <p><strong>Do you offer discretion?</strong><br>Always. Privacy is essential.</p>
+    <p><strong>Are deposits required?</strong><br>Details shared after initial contact.</p>
+  </section>
+
+  <!-- G) CONTACT -->
+  <section>
+    <h2>Private Inquiry</h2>
+
+    <form>
+      <input type="text" placeholder="Your name" required>
+      <input type="email" placeholder="Email address" required>
+      <textarea placeholder="A brief introduction & inquiry" required></textarea>
+      <button class="btn" type="submit">Send Inquiry</button>
+    </form>
+
+    <!-- H) WHATSAPP -->
+    <p style="margin-top:30px; font-size:0.9em;">
+      Or contact via WhatsApp:
+      <br>
+      <a href="https://wa.me/XXXXXXXXXX" class="btn" style="margin-top:15px; display:inline-block;">
+        WhatsApp
+      </a>
+    </p>
+  </section>
+
+  <!-- F) SOCIALS -->
+  <section class="socials">
+    <a href="#">Instagram</a>
+    <a href="#">Twitter</a>
+  </section>
+
+  <footer>
+    © 2026 Natalia Kay · All rights reserved
+  </footer>
+
+</body>
+</html>
