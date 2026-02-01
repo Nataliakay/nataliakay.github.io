@@ -129,20 +129,6 @@ button {
   cursor: pointer;
 }
 
-/* FOOTER */
-footer {
-  background: #f5c1d9;
-  padding: 35px;
-  text-align: center;
-}
-
-footer a {
-  margin: 0 12px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #3b2c35;
-}
-
 .payments {
   margin-top: 20px;
   font-size: 0.9rem;
