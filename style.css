@@ -1,1 +1,113 @@
-body {}
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background-color: #fde8f1;
+  color: #3b2c35;
+}
+
+nav {
+  background: #ffffff;
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #b86b8c;
+  font-weight: bold;
+}
+
+header {
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+header h1 {
+  font-size: 3.6rem;
+}
+
+header p {
+  font-style: italic;
+  font-size: 1.3rem;
+}
+
+section {
+  padding: 70px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  color: #b86b8c;
+  margin-bottom: 35px;
+}
+
+img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.rates-box, .booking-box {
+  background: white;
+  padding: 35px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 15px;
+  background: #b86b8c;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+footer {
+  background: #f5c1d9;
+  padding: 35px;
+  text-align: center;
+}
+
+.social-icons svg {
+  width: 40px;
+  margin: 0 10px;
+  fill: #3b2c35;
+}
