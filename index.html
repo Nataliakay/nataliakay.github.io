@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Natalia Kay | Private Arrangements</title>
 
-  <!-- Google Font -->
+  <!-- Elegant Font -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
 
   <style>
@@ -16,36 +16,13 @@
       color: #3b2c35;
     }
 
-    header {
-      background: linear-gradient(
-        rgba(0,0,0,0.45),
-        rgba(0,0,0,0.45)
-      ),
-      url("https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e");
-      background-size: cover;
-      background-position: center;
-      height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff;
-    }
-
-    header h1 {
-      font-size: 3.2rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      font-style: italic;
-    }
-
     nav {
       background: #fff;
       padding: 15px;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     nav a {
@@ -55,76 +32,112 @@
       font-weight: bold;
     }
 
+    header {
+      background: linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.45)
+      ),
+      url("images/hero.jpg.JPG");
+      background-size: cover;
+      background-position: center;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      font-style: italic;
+    }
+
     section {
-      padding: 60px 20px;
+      padding: 70px 20px;
       max-width: 900px;
       margin: auto;
     }
 
     h2 {
       text-align: center;
-      margin-bottom: 30px;
       color: #b86b8c;
+      margin-bottom: 30px;
     }
 
     .about img {
       width: 100%;
-      border-radius: 12px;
-      margin-bottom: 25px;
+      border-radius: 15px;
+      margin-bottom: 30px;
     }
 
     .rates {
-      background: #fff;
-      border-radius: 12px;
-      padding: 30px;
+      background: white;
+      border-radius: 15px;
+      padding: 35px;
       text-align: center;
     }
 
     .rates p {
       font-size: 1.1rem;
+      margin: 12px 0;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      margin-top: 25px;
     }
 
     .booking-box {
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
+      background: white;
+      padding: 35px;
+      border-radius: 15px;
     }
 
     label {
       display: block;
-      margin-top: 15px;
+      margin-top: 18px;
     }
 
     input, select {
       width: 100%;
-      padding: 10px;
-      margin-top: 5px;
+      padding: 12px;
+      margin-top: 6px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
     }
 
     .checkbox {
-      margin-top: 20px;
+      margin-top: 25px;
+      font-size: 0.95rem;
     }
 
     button {
-      margin-top: 25px;
+      margin-top: 30px;
+      width: 100%;
+      padding: 15px;
       background: #b86b8c;
       color: white;
-      padding: 14px;
-      width: 100%;
       border: none;
-      border-radius: 25px;
+      border-radius: 30px;
       font-size: 1.1rem;
       cursor: pointer;
     }
 
     footer {
       background: #f5c1d9;
-      padding: 30px;
+      padding: 35px;
       text-align: center;
     }
 
-    .socials a {
-      margin: 0 10px;
+    footer a {
+      margin: 0 12px;
       text-decoration: none;
       color: #3b2c35;
       font-weight: bold;
@@ -134,89 +147,90 @@
 
 <body>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#arrangements">Private Arrangements</a>
-    <a href="#book">Book</a>
-  </nav>
+<nav>
+  <a href="#about">About</a>
+  <a href="#arrangements">Private Arrangements</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#book">Book</a>
+</nav>
 
-  <header>
-    <div>
-      <h1>Natalia Kay</h1>
-      <p>Discreet. Elegant. Unforgettable.</p>
-    </div>
-  </header>
+<header>
+  <div>
+    <h1>Natalia Kay</h1>
+    <p>Discreet · Elegant · Unforgettable</p>
+  </div>
+</header>
 
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c" alt="Luxury aesthetic">
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <img src="images/about.jpg.JPG" alt="Natalia Kay">
 
-    <p>
-      I am a refined companion offering private arrangements for discerning gentlemen.
-      Based primarily in <strong>Las Vegas</strong> and the <strong>Washington DC / VA area</strong>,
-      I travel frequently and am available for select engagements worldwide.
+  <p>
+    I am a refined companion offering private arrangements for discerning gentlemen.
+    Based primarily in <strong>Las Vegas</strong> and the <strong>Washington DC / VA area</strong>,
+    I travel frequently and am available worldwide.
+  </p>
+
+  <p>
+    Date nights, dinner engagements, fly-me-to-you experiences.
+    Passport ready, short-notice friendly — it’s never too late to reach out.
+  </p>
+</section>
+
+<section id="arrangements">
+  <h2>Private Arrangements</h2>
+  <div class="rates">
+    <p><strong>One Hour</strong> — 600</p>
+    <p><strong>Overnight</strong> — 3500</p>
+    <p><strong>Twelve Hours</strong> — 6500</p>
+    <p style="font-style: italic; margin-top: 20px;">
+      A 25% deposit is required to secure our time together.
     </p>
+  </div>
+</section>
 
-    <p>
-      Date nights, dinner companionship, fly-me-to-you experiences —
-      I am passport ready, available on short notice, and always worth the reach.
-    </p>
-  </section>
+<section id="gallery" class="gallery">
+  <h2>Gallery</h2>
+  <img src="images/gallery.jpg.JPG" alt="Natalia Kay Gallery">
+</section>
 
-  <section id="arrangements">
-    <h2>Private Arrangements</h2>
+<section id="book">
+  <h2>Booking Request</h2>
+  <div class="booking-box">
+    <label>Name</label>
+    <input type="text">
 
-    <div class="rates">
-      <p><strong>One Hour</strong> — 600</p>
-      <p><strong>Overnight</strong> — 3500</p>
-      <p><strong>Twelve Hours</strong> — 6500</p>
-      <p style="font-style: italic; margin-top: 20px;">
-        A 25% deposit is required to secure our time together.
-      </p>
-    </div>
-  </section>
+    <label>Email</label>
+    <input type="email">
 
-  <section id="book">
-    <h2>Booking Request</h2>
+    <label>Preferred City</label>
+    <select>
+      <option>Las Vegas</option>
+      <option>Washington DC / VA</option>
+      <option>Other</option>
+    </select>
 
-    <div class="booking-box">
-      <label>Name</label>
-      <input type="text">
+    <label>Preferred Date</label>
+    <input type="date">
 
-      <label>Email</label>
-      <input type="email">
-
-      <label>Preferred City</label>
-      <select>
-        <option>Las Vegas</option>
-        <option>Washington DC / VA</option>
-        <option>Other</option>
-      </select>
-
-      <label>Preferred Date</label>
-      <input type="date">
-
-      <div class="checkbox">
-        <input type="checkbox"> I understand a 25% deposit is required to confirm any appointment.
-      </div>
-
-      <button>Submit Inquiry</button>
-    </div>
-  </section>
-
-  <footer>
-    <p>Connect discreetly</p>
-
-    <div class="socials">
-      <a href="https://instagram.com/nataliakayxoxo" target="_blank">Instagram</a>
-      <a href="https://onlyfans.com/nataliakayxxx" target="_blank">OnlyFans</a>
-      <a href="https://wa.me/17027505631" target="_blank">WhatsApp</a>
+    <div class="checkbox">
+      <input type="checkbox"> I understand a 25% deposit is required to confirm any appointment.
     </div>
 
-    <p style="margin-top: 20px; font-size: 0.9rem;">
-      Venmo · PayPal · Zelle
-    </p>
-  </footer>
+    <button>Submit Inquiry</button>
+  </div>
+</section>
+
+<footer>
+  <p>Connect discreetly</p>
+  <a href="https://instagram.com/nataliakayxoxo" target="_blank">Instagram</a>
+  <a href="https://onlyfans.com/nataliakayxxx" target="_blank">OnlyFans</a>
+  <a href="https://wa.me/17027505631" target="_blank">WhatsApp</a>
+
+  <p style="margin-top: 20px; font-size: 0.9rem;">
+    Venmo · PayPal · Zelle
+  </p>
+</footer>
 
 </body>
 </html>
