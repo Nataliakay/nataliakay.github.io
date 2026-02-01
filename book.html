@@ -1,47 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Booking Request</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Private Booking | Natalia Kay</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background-color: #fde8f1;
+      color: #3b2c35;
+    }
+
+    nav {
+      background: #ffffff;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #b86b8c;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 70px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #b86b8c;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    .intro {
+      text-align: center;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 50px;
+    }
+
+    .box {
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 16px;
+      margin-bottom: 40px;
+    }
+
+    .box h3 {
+      color: #b86b8c;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .box p {
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    .rates-list p {
+      margin: 10px 0;
+      font-size: 1.05rem;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .checkbox {
+      margin-top: 20px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    button {
+      margin-top: 30px;
+      width: 100%;
+      padding: 16px;
+      background: #b86b8c;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    .payments {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .payments svg {
+      width: 42px;
+      height: auto;
+      opacity: 0.85;
+    }
+
+    footer {
+      background: #f5c1d9;
+      padding: 35px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 
 <body>
 
 <nav>
   <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="rates.html">Arrangements</a>
   <a href="gallery.html">Gallery</a>
+  <a href="rates.html">Arrangements</a>
+  <a href="booking.html">Book</a>
 </nav>
 
 <section>
-<h2>Booking Request</h2>
+  <h1>Private Booking Request</h1>
 
-<div class="booking-box">
-<label>Name</label>
-<input type="text">
+  <p class="intro">
+    Thank you for your interest in a private arrangement.
+    I welcome serious, respectful inquiries from discerning gentlemen
+    seeking a refined and memorable experience.
+    <br><br>
+    All engagements are by appointment only and confirmed upon receipt of a donation.
+  </p>
 
-<label>Email</label>
-<input type="email">
+  <div class="box">
+    <h3>Available Arrangements</h3>
 
-<label>Preferred City</label>
-<select>
-<option>Las Vegas</option>
-<option>Washington DC / VA</option>
-<option>Other</option>
-</select>
+    <div class="rates-list">
+      <p><strong>One Hour</strong> — 600</p>
+      <p><strong>Dinner Date</strong> (3 hours) — 1,500</p>
+      <p><strong>Overnight</strong> — 3,500</p>
+      <p><strong>Twelve Hours</strong> — 6,500</p>
+      <br>
+      <p><strong>Fly Me To You — U.S.</strong> (6 hours) — 5,000</p>
+      <p><strong>International Engagements</strong> (12 hours) — 10,000</p>
+    </div>
+  </div>
 
-<label>Preferred Date</label>
-<input type="date">
+  <div class="box">
+    <h3>Deposit & Confirmation</h3>
+    <p>
+      A <strong>25% donation</strong> is required to secure our time together.
+      Appointments are not confirmed without receipt of the donation.
+    </p>
 
-<label>
-<input type="checkbox"> I understand a 25% deposit is required
-</label>
+    <p style="margin-top: 15px;">
+      Accepted donation methods:
+    </p>
 
-<button>Submit Inquiry</button>
-</div>
+    <div class="payments">
+      <!-- Venmo -->
+      <svg viewBox="0 0 64 64"><text x="0" y="45" font-size="40">V</text></svg>
+      <!-- PayPal -->
+      <svg viewBox="0 0 64 64"><text x="0" y="45" font-size="40">P</text></svg>
+      <!-- Zelle -->
+      <svg viewBox="0 0 64 64"><text x="0" y="45" font-size="40">Z</text></svg>
+    </div>
+  </div>
 
+  <div class="box">
+    <h3>Cancellation Policy</h3>
+    <p>
+      Any cancellation made after confirmation will result in a
+      <strong>50% forfeiture of the donation</strong>.
+      This policy is in place to respect both time and discretion.
+    </p>
+  </div>
+
+  <div class="box">
+    <h3>Private Inquiry Form</h3>
+
+    <label>Name</label>
+    <input type="text">
+
+    <label>Email</label>
+    <input type="email">
+
+    <label>Preferred Location</label>
+    <input type="text" placeholder="City, State, or Country">
+
+    <label>Preferred Date</label>
+    <input type="date">
+
+    <div class="checkbox">
+      <input type="checkbox">
+      I understand a 25% donation is required to confirm an appointment and
+      acknowledge the cancellation policy.
+    </div>
+
+    <button>Submit Private Inquiry</button>
+  </div>
 </section>
+
+<footer>
+  Discreet · Professional · Private
+</footer>
+
 </body>
 </html>
