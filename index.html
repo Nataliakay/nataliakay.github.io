@@ -1,229 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Natalia Kay</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Natalia Kay | Private Arrangements</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Parisienne&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      background: #140b10;
-      color: #f7e9ef;
-      font-family: "Playfair Display", serif;
-      letter-spacing: 0.4px;
+      font-family: 'Playfair Display', serif;
+      background-color: #fff7fa;
+      color: #3a2a2f;
+      line-height: 1.7;
     }
 
-    section {
-      padding: 90px 22px;
-      max-width: 900px;
-      margin: 0 auto;
+    header {
+      background: url("images/hero.jpg") center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 240, 246, 0.55);
+    }
+
+    header .hero-text {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      padding: 20px;
     }
 
     h1 {
-      font-family: "Great Vibes", cursive;
-      font-size: 4.2em;
-      color: #f2b6c6;
-      margin-bottom: 20px;
+      font-family: 'Parisienne', cursive;
+      font-size: 4rem;
+      margin-bottom: 10px;
     }
 
     h2 {
-      font-family: "Great Vibes", cursive;
-      font-size: 2.6em;
-      color: #f2b6c6;
-      margin-bottom: 30px;
+      font-size: 2rem;
+      margin-bottom: 20px;
     }
 
-    p {
-      font-size: 1.05em;
-      line-height: 1.8;
-      opacity: 0.92;
-      max-width: 700px;
-      margin: 0 auto 25px;
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.9);
+      padding: 10px 0;
+      text-align: center;
+      z-index: 100;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #7a4a5a;
+      font-weight: 500;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about img {
+      width: 100%;
+      border-radius: 8px;
     }
 
     .divider {
-      width: 60px;
-      height: 1px;
-      background: #f2b6c6;
-      margin: 40px auto;
-      opacity: 0.6;
+      text-align: center;
+      font-size: 2rem;
+      margin: 40px 0;
+      color: #c48ca3;
     }
 
-    /* Gallery */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      margin-top: 40px;
-    }
-
-    .gallery div {
-      height: 300px;
-      background: rgba(255,255,255,0.06);
+    .rates {
+      background: #fff;
       border-radius: 10px;
+      padding: 40px;
+      text-align: center;
     }
 
-    /* Services */
-    .services p {
-      margin-bottom: 12px;
+    .rates p {
+      font-size: 1.1rem;
     }
 
-    /* FAQ */
-    .faq p {
-      margin-bottom: 18px;
+    .booking {
+      background: #fbe9f0;
+      border-radius: 10px;
+      padding: 40px;
     }
 
-    /* Form */
-    form {
-      max-width: 500px;
-      margin: 40px auto 0;
+    label {
+      display: block;
+      margin-top: 15px;
     }
 
-    input, textarea {
+    input, select, textarea {
       width: 100%;
-      padding: 14px;
-      margin-bottom: 16px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(242,182,198,0.4);
-      color: #fff;
-      border-radius: 8px;
-      font-family: "Playfair Display", serif;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-family: inherit;
     }
 
-    input::placeholder,
-    textarea::placeholder {
-      color: #e6b7c6;
+    .checkbox {
+      margin-top: 20px;
     }
 
-    textarea {
-      min-height: 140px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 42px;
-      background: linear-gradient(135deg, #f2b6c6, #e39aad);
-      color: #2b0f18;
-      border-radius: 999px;
+    button {
+      margin-top: 30px;
+      padding: 15px 30px;
       border: none;
-      font-size: 0.95em;
-      letter-spacing: 1px;
+      background: #c48ca3;
+      color: white;
+      font-size: 1rem;
       cursor: pointer;
-      transition: opacity 0.2s ease, transform 0.2s ease;
-    }
-
-    .btn:hover {
-      opacity: 0.9;
-      transform: translateY(-1px);
-    }
-
-    /* Socials */
-    .socials a {
-      margin: 0 12px;
-      color: #f2b6c6;
-      text-decoration: none;
-      font-size: 0.9em;
+      border-radius: 30px;
     }
 
     footer {
+      background: #fff;
       text-align: center;
-      padding: 50px 20px;
-      font-size: 0.75em;
-      opacity: 0.5;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #7a4a5a;
+    }
+
+    .payments img {
+      height: 35px;
+      margin: 10px;
+    }
+
+    @media(max-width: 768px) {
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- A) HERO -->
-  <section>
+<nav>
+  <a href="#about">About</a>
+  <a href="#arrangements">Arrangements</a>
+  <a href="#booking">Book</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<header>
+  <div class="hero-text">
     <h1>Natalia Kay</h1>
-    <p>
-      Elegant, discreet companionship for those who value presence,
-      intimacy, and refined connection.
-    </p>
-    <div class="divider"></div>
-    <p>By private inquiry only.</p>
-  </section>
+    <h2>Private Arrangements for the Discerning Gentleman</h2>
+    <p>Discreet. Elegant. Intentionally curated experiences.</p>
+  </div>
+</header>
 
-  <!-- B) GALLERY -->
-  <section>
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <div></div>
-      <div></div>
-      <div></div>
+<section id="about">
+  <div class="about">
+    <img src="images/about.jpg" alt="Natalia Kay">
+    <div>
+      <h2>About Me</h2>
+      <p>
+        I am based primarily between <strong>Las Vegas</strong> and the
+        <strong>Washington DC / Northern Virginia</strong> area.
+        My time is reserved for gentlemen who value discretion,
+        refinement, and meaningful connection.
+      </p>
+      <p>
+        I am available for date nights, dinner engagements, extended
+        private arrangements, and select travel opportunities.
+        Passport ready and accustomed to short-notice plans —
+        if timing feels tight, availability may be closer than expected.
+      </p>
     </div>
-    <p style="margin-top:20px; font-size:0.9em; opacity:0.7;">
-      Photos shared privately upon request
-    </p>
-  </section>
+  </div>
+</section>
 
-  <!-- C) ABOUT -->
-  <section>
-    <h2>About Me</h2>
+<div class="divider">✦</div>
+
+<section id="arrangements">
+  <div class="rates">
+    <h2>Private Arrangements</h2>
+    <p>Hourly Engagement — <strong>$600</strong></p>
+    <p>Overnight Experience — <strong>$3,500</strong></p>
+    <p>Extended 12-Hour Arrangement — <strong>$6,500</strong></p>
+    <p style="margin-top:20px;">
+      A <strong>25% deposit</strong> is required to secure all arrangements.
+      No deposit, no appointment.
+    </p>
+  </div>
+</section>
+
+<div class="divider">✦</div>
+
+<section id="booking">
+  <div class="booking">
+    <h2>Booking Request</h2>
+
     <p>
-      I offer an experience rooted in elegance, warmth, and genuine presence.
-      My time is curated, unhurried, and designed to feel natural and indulgent.
+      Please complete the form below for serious inquiries only.
+      Approved requests will receive a discreet confirmation email
+      with deposit instructions and further details.
     </p>
-    <p>
-      I value discretion, respect, and meaningful connection above all else.
-    </p>
-  </section>
-
-  <!-- D) SERVICES -->
-  <section class="services">
-    <h2>Experiences</h2>
-    <p>• Dinner & social engagements</p>
-    <p>• Intimate private companionship</p>
-    <p>• Travel & extended arrangements</p>
-    <p>• Bespoke experiences upon request</p>
-  </section>
-
-  <!-- E) FAQ -->
-  <section class="faq">
-    <h2>FAQ</h2>
-    <p><strong>How do I inquire?</strong><br>Via the form below or WhatsApp.</p>
-    <p><strong>Do you offer discretion?</strong><br>Always. Privacy is essential.</p>
-    <p><strong>Are deposits required?</strong><br>Details shared after initial contact.</p>
-  </section>
-
-  <!-- G) CONTACT -->
-  <section>
-    <h2>Private Inquiry</h2>
 
     <form>
-      <input type="text" placeholder="Your name" required>
-      <input type="email" placeholder="Email address" required>
-      <textarea placeholder="A brief introduction & inquiry" required></textarea>
-      <button class="btn" type="submit">Send Inquiry</button>
+      <label>Name</label>
+      <input type="text" required>
+
+      <label>Email</label>
+      <input type="email" required>
+
+      <label>City</label>
+      <input type="text" placeholder="Las Vegas / Washington DC / Travel">
+
+      <label>Preferred Date</label>
+      <input type="date">
+
+      <label>Length of Time Requested</label>
+      <select>
+        <option>Hourly</option>
+        <option>Overnight</option>
+        <option>12 Hours</option>
+      </select>
+
+      <label>Message</label>
+      <textarea rows="4"></textarea>
+
+      <div class="checkbox">
+        <input type="checkbox" required>
+        <label>
+          I understand a 25% deposit is required to confirm,
+          and that this is a private arrangement for respectful
+          and professional conduct only.
+        </label>
+      </div>
+
+      <button type="submit">Submit Request</button>
     </form>
+  </div>
+</section>
 
-    <!-- H) WHATSAPP -->
-    <p style="margin-top:30px; font-size:0.9em;">
-      Or contact via WhatsApp:
-      <br>
-      <a href="https://wa.me/XXXXXXXXXX" class="btn" style="margin-top:15px; display:inline-block;">
-        WhatsApp
-      </a>
-    </p>
-  </section>
+<footer id="contact">
+  <p>Discretion is always respected.</p>
 
-  <!-- F) SOCIALS -->
-  <section class="socials">
-    <a href="#">Instagram</a>
-    <a href="#">Twitter</a>
-  </section>
+  <div class="socials">
+    <a href="https://instagram.com/nataliakayxoxo" target="_blank">Instagram</a> |
+    <a href="https://onlyfans.com/nataliakayxxx" target="_blank">OnlyFans</a> |
+    <a href="https://wa.me/17027505631" target="_blank">WhatsApp</a>
+  </div>
 
-  <footer>
-    © 2026 Natalia Kay · All rights reserved
-  </footer>
+  <div class="payments">
+    <!-- Logos to be added -->
+    <!-- venmo.png paypal.png zelle.png -->
+  </div>
+
+  <p style="margin-top:20px;">© Natalia Kay</p>
+</footer>
 
 </body>
 </html>
