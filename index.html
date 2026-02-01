@@ -1,151 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Natalia Kay | Private Arrangements</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Playfair Display', serif;
-      background-color: #fde8f1;
-      color: #3b2c35;
-    }
-
-    nav {
-      background: #ffffff;
-      padding: 15px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #b86b8c;
-      font-weight: bold;
-    }
-
-    header {
-      background:
-        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-        url("hero.jpg");
-      background-size: cover;
-      background-position: center;
-      height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
-
-    header h1 {
-      font-size: 3.6rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-style: italic;
-      font-size: 1.3rem;
-    }
-
-    section {
-      padding: 70px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      color: #b86b8c;
-      margin-bottom: 30px;
-    }
-
-    .about img {
-      width: 100%;
-      border-radius: 16px;
-      margin-bottom: 30px;
-    }
-
-    .rates {
-      background: white;
-      padding: 35px;
-      border-radius: 16px;
-      text-align: center;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .gallery-grid img {
-      width: 100%;
-      border-radius: 16px;
-    }
-
-    .booking-box {
-      background: white;
-      padding: 35px;
-      border-radius: 16px;
-    }
-
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-    }
-
-    input, select {
-      width: 100%;
-      padding: 12px;
-      margin-top: 6px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
-
-    button {
-      margin-top: 25px;
-      width: 100%;
-      padding: 15px;
-      background: #b86b8c;
-      color: white;
-      border: none;
-      border-radius: 30px;
-      font-size: 1.1rem;
-      cursor: pointer;
-    }
-
-    footer {
-      background: #f5c1d9;
-      padding: 35px;
-      text-align: center;
-    }
-
-    footer a {
-      margin: 0 12px;
-      text-decoration: none;
-      font-weight: bold;
-      color: #3b2c35;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Natalia Kay | Private Arrangements</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <nav>
-  <a href="#about">About</a>
-  <a href="#arrangements">Arrangements</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#book">Book</a>
+  <a href="about.html">About</a>
+  <a href="rates.html">Arrangements</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="book.html">Book</a>
 </nav>
 
 <header>
@@ -155,63 +23,23 @@
   </div>
 </header>
 
-<section id="about" class="about">
-  <h2>About Me</h2>
-  <img src="about.jpg" alt="Natalia Kay">
-
-  <p>
-    I am a refined companion offering private arrangements for discerning gentlemen.
-    Based primarily in <strong>Las Vegas</strong> and the
-    <strong>Washington DC / VA area</strong>, with frequent travel worldwide.
+<section>
+  <h2>Private Arrangements for Discerning Gentlemen</h2>
+  <p style="text-align:center; font-size:1.1rem;">
+    Thoughtfully curated companionship designed for privacy, connection, and indulgence.
   </p>
 </section>
 
-<section id="arrangements">
-  <h2>Private Arrangements</h2>
-  <div class="rates">
-    <p><strong>One Hour</strong> — 600</p>
-    <p><strong>Overnight</strong> — 3500</p>
-    <p><strong>Twelve Hours</strong> — 6500</p>
-    <p style="font-style: italic; margin-top: 20px;">
-      25% deposit required to confirm.
-    </p>
-  </div>
-</section>
-
-<section id="gallery">
-  <h2>Gallery</h2>
-  <div class="gallery-grid">
-    <img src="gallery.jpg" alt="Gallery image 1">
-    <img src="gallery2.jpg" alt="Gallery image 2">
-    <img src="gallery3.jpg" alt="Gallery image 3">
-  </div>
-</section>
-
-<section id="book">
-  <h2>Booking Request</h2>
-  <div class="booking-box">
-    <label>Name</label>
-    <input type="text">
-
-    <label>Email</label>
-    <input type="email">
-
-    <label>Preferred City</label>
-    <select>
-      <option>Las Vegas</option>
-      <option>Washington DC / VA</option>
-      <option>Other</option>
-    </select>
-
-    <button>Submit Inquiry</button>
-  </div>
-</section>
-
 <footer>
-  <p>Connect discreetly</p>
-  <a href="#">Instagram</a>
-  <a href="#">OnlyFans</a>
-  <a href="#">WhatsApp</a>
+  <p>Accepted Payments</p>
+  <div class="social-icons">
+    <!-- Venmo -->
+    <svg viewBox="0 0 24 24"><path d="M5 3h14v18H5z"/></svg>
+    <!-- PayPal -->
+    <svg viewBox="0 0 24 24"><path d="M6 4h9a5 5 0 010 10H9v6H6z"/></svg>
+    <!-- Zelle -->
+    <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg>
+  </div>
 </footer>
 
 </body>
