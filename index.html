@@ -2,102 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Natalia Kay | Private Arrangements</title>
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Parisienne&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      font-family: 'Playfair Display', serif;
-      background-color: #fff7fa;
-      color: #3a2a2f;
-      line-height: 1.7;
+      font-family: 'Playfair Display', cursive;
+      background-color: #fde8f1;
+      color: #3b2c35;
     }
 
     header {
-      background: url("images/hero.jpg") center/cover no-repeat;
-      height: 100vh;
+      background: linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.45)
+      ),
+      url("https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e");
+      background-size: cover;
+      background-position: center;
+      height: 90vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      position: relative;
+      color: #fff;
     }
 
-    header::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(255, 240, 246, 0.55);
-    }
-
-    header .hero-text {
-      position: relative;
-      z-index: 1;
-      max-width: 700px;
-      padding: 20px;
-    }
-
-    h1 {
-      font-family: 'Parisienne', cursive;
-      font-size: 4rem;
+    header h1 {
+      font-size: 3.2rem;
       margin-bottom: 10px;
     }
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+    header p {
+      font-size: 1.2rem;
+      font-style: italic;
     }
 
     nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(255,255,255,0.9);
-      padding: 10px 0;
+      background: #fff;
+      padding: 15px;
       text-align: center;
-      z-index: 100;
     }
 
     nav a {
       margin: 0 15px;
       text-decoration: none;
-      color: #7a4a5a;
-      font-weight: 500;
+      color: #b86b8c;
+      font-weight: bold;
     }
 
     section {
-      max-width: 1000px;
+      padding: 60px 20px;
+      max-width: 900px;
       margin: auto;
-      padding: 80px 20px;
     }
 
-    .about {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #b86b8c;
     }
 
     .about img {
       width: 100%;
-      border-radius: 8px;
-    }
-
-    .divider {
-      text-align: center;
-      font-size: 2rem;
-      margin: 40px 0;
-      color: #c48ca3;
+      border-radius: 12px;
+      margin-bottom: 25px;
     }
 
     .rates {
       background: #fff;
-      border-radius: 10px;
-      padding: 40px;
+      border-radius: 12px;
+      padding: 30px;
       text-align: center;
     }
 
@@ -105,10 +84,10 @@
       font-size: 1.1rem;
     }
 
-    .booking {
-      background: #fbe9f0;
-      border-radius: 10px;
-      padding: 40px;
+    .booking-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
     }
 
     label {
@@ -116,13 +95,10 @@
       margin-top: 15px;
     }
 
-    input, select, textarea {
+    input, select {
       width: 100%;
       padding: 10px;
       margin-top: 5px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-family: inherit;
     }
 
     .checkbox {
@@ -130,164 +106,117 @@
     }
 
     button {
-      margin-top: 30px;
-      padding: 15px 30px;
-      border: none;
-      background: #c48ca3;
+      margin-top: 25px;
+      background: #b86b8c;
       color: white;
-      font-size: 1rem;
+      padding: 14px;
+      width: 100%;
+      border: none;
+      border-radius: 25px;
+      font-size: 1.1rem;
       cursor: pointer;
-      border-radius: 30px;
     }
 
     footer {
-      background: #fff;
+      background: #f5c1d9;
+      padding: 30px;
       text-align: center;
-      padding: 40px 20px;
-      font-size: 0.9rem;
     }
 
     .socials a {
       margin: 0 10px;
       text-decoration: none;
-      color: #7a4a5a;
-    }
-
-    .payments img {
-      height: 35px;
-      margin: 10px;
-    }
-
-    @media(max-width: 768px) {
-      .about {
-        grid-template-columns: 1fr;
-      }
-
-      h1 {
-        font-size: 3rem;
-      }
+      color: #3b2c35;
+      font-weight: bold;
     }
   </style>
 </head>
 
 <body>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#arrangements">Arrangements</a>
-  <a href="#booking">Book</a>
-  <a href="#contact">Contact</a>
-</nav>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#arrangements">Private Arrangements</a>
+    <a href="#book">Book</a>
+  </nav>
 
-<header>
-  <div class="hero-text">
-    <h1>Natalia Kay</h1>
-    <h2>Private Arrangements for the Discerning Gentleman</h2>
-    <p>Discreet. Elegant. Intentionally curated experiences.</p>
-  </div>
-</header>
-
-<section id="about">
-  <div class="about">
-    <img src="images/about.jpg" alt="Natalia Kay">
+  <header>
     <div>
-      <h2>About Me</h2>
-      <p>
-        I am based primarily between <strong>Las Vegas</strong> and the
-        <strong>Washington DC / Northern Virginia</strong> area.
-        My time is reserved for gentlemen who value discretion,
-        refinement, and meaningful connection.
-      </p>
-      <p>
-        I am available for date nights, dinner engagements, extended
-        private arrangements, and select travel opportunities.
-        Passport ready and accustomed to short-notice plans —
-        if timing feels tight, availability may be closer than expected.
-      </p>
+      <h1>Natalia Kay</h1>
+      <p>Discreet. Elegant. Unforgettable.</p>
     </div>
-  </div>
-</section>
+  </header>
 
-<div class="divider">✦</div>
-
-<section id="arrangements">
-  <div class="rates">
-    <h2>Private Arrangements</h2>
-    <p>Hourly Engagement — <strong>$600</strong></p>
-    <p>Overnight Experience — <strong>$3,500</strong></p>
-    <p>Extended 12-Hour Arrangement — <strong>$6,500</strong></p>
-    <p style="margin-top:20px;">
-      A <strong>25% deposit</strong> is required to secure all arrangements.
-      No deposit, no appointment.
-    </p>
-  </div>
-</section>
-
-<div class="divider">✦</div>
-
-<section id="booking">
-  <div class="booking">
-    <h2>Booking Request</h2>
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c" alt="Luxury aesthetic">
 
     <p>
-      Please complete the form below for serious inquiries only.
-      Approved requests will receive a discreet confirmation email
-      with deposit instructions and further details.
+      I am a refined companion offering private arrangements for discerning gentlemen.
+      Based primarily in <strong>Las Vegas</strong> and the <strong>Washington DC / VA area</strong>,
+      I travel frequently and am available for select engagements worldwide.
     </p>
 
-    <form>
+    <p>
+      Date nights, dinner companionship, fly-me-to-you experiences —
+      I am passport ready, available on short notice, and always worth the reach.
+    </p>
+  </section>
+
+  <section id="arrangements">
+    <h2>Private Arrangements</h2>
+
+    <div class="rates">
+      <p><strong>One Hour</strong> — 600</p>
+      <p><strong>Overnight</strong> — 3500</p>
+      <p><strong>Twelve Hours</strong> — 6500</p>
+      <p style="font-style: italic; margin-top: 20px;">
+        A 25% deposit is required to secure our time together.
+      </p>
+    </div>
+  </section>
+
+  <section id="book">
+    <h2>Booking Request</h2>
+
+    <div class="booking-box">
       <label>Name</label>
-      <input type="text" required>
+      <input type="text">
 
       <label>Email</label>
-      <input type="email" required>
+      <input type="email">
 
-      <label>City</label>
-      <input type="text" placeholder="Las Vegas / Washington DC / Travel">
+      <label>Preferred City</label>
+      <select>
+        <option>Las Vegas</option>
+        <option>Washington DC / VA</option>
+        <option>Other</option>
+      </select>
 
       <label>Preferred Date</label>
       <input type="date">
 
-      <label>Length of Time Requested</label>
-      <select>
-        <option>Hourly</option>
-        <option>Overnight</option>
-        <option>12 Hours</option>
-      </select>
-
-      <label>Message</label>
-      <textarea rows="4"></textarea>
-
       <div class="checkbox">
-        <input type="checkbox" required>
-        <label>
-          I understand a 25% deposit is required to confirm,
-          and that this is a private arrangement for respectful
-          and professional conduct only.
-        </label>
+        <input type="checkbox"> I understand a 25% deposit is required to confirm any appointment.
       </div>
 
-      <button type="submit">Submit Request</button>
-    </form>
-  </div>
-</section>
+      <button>Submit Inquiry</button>
+    </div>
+  </section>
 
-<footer id="contact">
-  <p>Discretion is always respected.</p>
+  <footer>
+    <p>Connect discreetly</p>
 
-  <div class="socials">
-    <a href="https://instagram.com/nataliakayxoxo" target="_blank">Instagram</a> |
-    <a href="https://onlyfans.com/nataliakayxxx" target="_blank">OnlyFans</a> |
-    <a href="https://wa.me/17027505631" target="_blank">WhatsApp</a>
-  </div>
+    <div class="socials">
+      <a href="https://instagram.com/nataliakayxoxo" target="_blank">Instagram</a>
+      <a href="https://onlyfans.com/nataliakayxxx" target="_blank">OnlyFans</a>
+      <a href="https://wa.me/17027505631" target="_blank">WhatsApp</a>
+    </div>
 
-  <div class="payments">
-    <!-- Logos to be added -->
-    <!-- venmo.png paypal.png zelle.png -->
-  </div>
-
-  <p style="margin-top:20px;">© Natalia Kay</p>
-</footer>
+    <p style="margin-top: 20px; font-size: 0.9rem;">
+      Venmo · PayPal · Zelle
+    </p>
+  </footer>
 
 </body>
 </html>
