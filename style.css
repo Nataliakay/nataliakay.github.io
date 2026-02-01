@@ -1,17 +1,135 @@
+/* ===== GLOBAL SITE STYLES ===== */
+
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background-color: #fde8f1;
+  color: #3b2c35;
+}
+
+nav {
+  background: #ffffff;
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #b86b8c;
+  font-weight: bold;
+}
+
+header {
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+header h1 {
+  font-size: 3.6rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-style: italic;
+  font-size: 1.3rem;
+}
+
+section {
+  padding: 70px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  color: #b86b8c;
+  margin-bottom: 30px;
+}
+
+/* ===== GALLERY ===== */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* ===== BOOKING FORM ===== */
+
+.booking-box {
+  background: white;
+  padding: 35px;
+  border-radius: 16px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: 'Playfair Display', serif;
+}
+
+button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 15px;
+  background: #b86b8c;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+  background: #f5c1d9;
+  padding: 35px;
+  text-align: center;
+}
+
+footer a {
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #3b2c35;
+}
+
 /* ===== RATES SECTION ===== */
 
 #rates {
   background-color: #fde8f1;
   padding: 90px 20px;
   text-align: center;
-  font-family: 'Playfair Display', serif;
-}
-
-#rates h2 {
-  color: #b86b8c;
-  margin-bottom: 55px;
-  font-size: 2.2rem;
-  letter-spacing: 1px;
 }
 
 .rates-grid {
@@ -39,7 +157,6 @@
   color: #b86b8c;
   font-size: 1.35rem;
   margin-bottom: 12px;
-  letter-spacing: 0.6px;
 }
 
 .rate-card .price {
@@ -47,7 +164,6 @@
   font-weight: 600;
   color: #3b2c35;
   margin: 14px 0;
-  letter-spacing: 1px;
 }
 
 .rate-card .details {
@@ -64,14 +180,15 @@
   line-height: 1.7;
 }
 
-/* Mobile refinement */
+/* ===== MOBILE ===== */
+
 @media (max-width: 600px) {
-  #rates {
-    padding: 70px 18px;
+  header h1 {
+    font-size: 2.6rem;
   }
 
-  #rates h2 {
-    font-size: 1.9rem;
+  section {
+    padding: 60px 18px;
   }
 
   .rate-card {
