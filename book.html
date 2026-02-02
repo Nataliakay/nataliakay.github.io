@@ -80,29 +80,27 @@ document.getElementById("booking-form").addEventListener("submit", function(e){
 
   const form = this;
 
-  // 1️⃣ SEND TO YOU (ADMIN)
+  // ADMIN EMAIL
   emailjs.sendForm(
     "service_o2vdend",
     "template_jgdwjfi",
     form
   )
   .then(function(){
-
-    // 2️⃣ SEND CONFIRMATION TO CLIENT
+    // CLIENT CONFIRMATION
     return emailjs.sendForm(
       "service_o2vdend",
       "template_9o6aakh",
       form
     );
-
   })
   .then(function(){
     alert("Your booking request has been sent 🤍 A confirmation email has been sent to you.");
     form.reset();
   })
   .catch(function(error){
-    alert("Something went wrong. Please try again.");
     console.log(error);
+    alert("Something went wrong. Please try again.");
   });
 });
 </script>
