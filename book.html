@@ -31,7 +31,7 @@
   <h2>Booking Request</h2>
 
   <!-- NEW UX BLOCK GOES HERE -->
-  <div class="booking-intro">
+  <div class="booking-intro" id="booking-intro">
     <p class="booking-title">Booking Request</p>
     <p class="booking-subtext">
       Please complete the form below to submit a private booking inquiry.
@@ -110,8 +110,9 @@ document.getElementById("booking-form").addEventListener("submit", function(e){
       form
     );
   })
- .then(function(){
+.then(function(){
   document.getElementById("booking-success").style.display = "block";
+  document.getElementById("booking-intro").style.display = "none";
   form.style.display = "none";
   form.reset();
 })
