@@ -110,10 +110,11 @@ document.getElementById("booking-form").addEventListener("submit", function(e){
       form
     );
   })
-  .then(function(){
-    alert("Your booking request has been sent 🤍 A confirmation email has been sent to you.");
-    form.reset();
-  })
+ .then(function(){
+  document.getElementById("booking-success").style.display = "block";
+  form.style.display = "none";
+  form.reset();
+})
   .catch(function(error){
     console.log(error);
     alert("Something went wrong. Please try again.");
