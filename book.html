@@ -111,15 +111,18 @@
 
 </section>
 
-<footer>
-  <p>Discretion always respected.</p>
+<footer role="contentinfo">
+  <p>&copy; <span id="year"></span> Natalia Kay. Discretion always respected.</p>
 </footer>
 
 <script>
-document.getElementById("booking-form").addEventListener("submit", function(e){
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("booking-form");
+  if (!form) return;
+
+  form.addEventListener("submit", function(e){
   e.preventDefault();
 
-  const form = this;
 
   // ADMIN EMAIL
   emailjs.sendForm(
@@ -144,8 +147,12 @@ document.getElementById("booking-form").addEventListener("submit", function(e){
   .catch(function(error){
     console.log(error);
     alert("Something went wrong. Please try again.");
-  });
 });
+});
+const yearEl = document.getElementById("year");
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
 </script>
 
 </body>
