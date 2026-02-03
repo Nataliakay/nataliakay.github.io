@@ -301,3 +301,9 @@ button {
   font-size: 1.15rem;
   opacity: 0.85;
 }
+.arrangements-privacy {
+  text-align: center;
+  font-style: italic;
+  margin-top: 30px;
+  opacity: 0.75;
+}
