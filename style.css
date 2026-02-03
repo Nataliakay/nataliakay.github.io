@@ -56,7 +56,7 @@ header p {
   font-size: 1.3rem;
 }
 
-/* SECTIONS */
+/* SECTIONS */ l
 section {
   padding: 70px 20px;
   max-width: 900px;
@@ -84,7 +84,7 @@ h2 {
   text-align: center;
 }
 
-.rates p {
+.rates p {.
   font-size: 1.1rem;
   margin: 18px 0;
   color: #3b2c35;
@@ -148,7 +148,7 @@ button {
 .bottom-title {
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 10px;.
   color: #3b2c35;
 }
 
@@ -227,4 +227,11 @@ button {
   font-style: italic;
   font-size: 0.95rem;
   color: #6b4b59;
+
+}
+
+/* Highlight policy keywords */
+.policy-highlight {
+  color: #b86b8c;
+  font-weight: bold;
 }
