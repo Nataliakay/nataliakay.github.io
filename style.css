@@ -317,3 +317,34 @@ button {
   text-align: center;
   margin-top: 10px;
 }
+.accepted-payments {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.payments-label {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 8px;
+}
+
+.payments-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.payments-links a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+.payments-links a:hover {
+  text-decoration: underline;
+}
