@@ -239,3 +239,39 @@ button {
   color: #b86b8c;
   font-weight: bold;
 }
+/* =========================
+   MOBILE STACK (SITE-WIDE)
+   ========================= */
+@media (max-width: 768px) {
+
+  /* Stack cards vertically */
+  .rates-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Reduce card padding for mobile */
+  .rate-card {
+    padding: 22px;
+  }
+
+  /* Center text on cards */
+  .rate-card h3,
+  .rate-card .price,
+  .rate-card .details {
+    text-align: center;
+  }
+
+  /* Mobile-friendly section spacing */
+  section {
+    padding: 40px 16px;
+  }
+
+  /* Improve button tap size */
+  button {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+}
