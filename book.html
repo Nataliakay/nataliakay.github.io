@@ -140,14 +140,6 @@ document.addEventListener("DOMContentLoaded", function () {
     "template_jgdwjfi",
     form
   )
-  .then(function(){
-    // CLIENT CONFIRMATION
-    return emailjs.sendForm(
-      "service_o2vdend",
-      "template_9o6aakh",
-      form
-    );
-  })
 .then(function(){
   document.getElementById("booking-success").style.display = "block";
   const intro = document.getElementById("booking-intro");
