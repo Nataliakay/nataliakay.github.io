@@ -150,7 +150,8 @@ document.addEventListener("DOMContentLoaded", function () {
   })
 .then(function(){
   document.getElementById("booking-success").style.display = "block";
-  document.getElementById("booking-intro").style.display = "none";
+  const intro = document.getElementById("booking-intro");
+if (intro) intro.style.display = "none";
   form.style.display = "none";
   form.reset();
 })
