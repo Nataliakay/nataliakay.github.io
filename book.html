@@ -162,7 +162,7 @@ so<!DOCTYPE html>
         success.style.display = "block";
         intro.style.display = "none";
         form.style.display = "none";
-        form.reset();
+        
 
         // SEND CLIENT EMAIL (non-blocking)
         emailjs.sendForm(
@@ -171,6 +171,7 @@ so<!DOCTYPE html>
           form,
           "UvNOSyDWDZzcZX3F7"
         );
+        setTimeout(() => form.reset(), 500);
       })
       .catch((error) => {
         console.error("EmailJS error:", error);
