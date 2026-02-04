@@ -127,57 +127,50 @@
   
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
-  (function () {
-    emailjs.init("KBpqTmbBWj9Rh0x0X");
-  })();
-document.addEventListener("DOMContentLoaded", function () {
-  console.log("JS LOADED");
-  const form = document.getElementById("booking-form");
-  if (!form) return;
+  emailjs.init("KBpqTmbWj9Rh0x0X");
 
-  form.addEventListener("submit", function(e){
-  e.preventDefault();
-  console.log("FORM SUBMITTED");
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("booking-form");
+    const success = document.getElementById("booking-success");
+    const intro = document.getElementById("booking-intro");
+    const yearEl = document.getElementById("year");
 
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
 
-  // ADMIN EMAIL
-  emailjs.sendForm(
-  "service_o2vdend",
-  "template_jgdwjfi", // ADMIN EMAIL
-  form
-)
-.then(function () {
+    if (!form) return;
 
-  // CLIENT CONFIRMATION EMAIL
-  return emailjs.sendForm(
-    "service_o2vdend",
-    "template_906aakh", // CLIENT EMAIL
-    form
-  );
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-})
-.then(function () {
+      emailjs.sendForm(
+        "service_o2vdend",
+        "template_jgdwjfi",
+        form,
+        "KBpqTmbWj9Rh0x0X"
+      )
+      .then(() => {
+        // SHOW SUCCESS IMMEDIATELY
+        success.style.display = "block";
+        intro.style.display = "none";
+        form.style.display = "none";
+        form.reset();
 
-  // SHOW SUCCESS MESSAGE
-  const success = document.getElementById("booking-success");
-  const intro = document.getElementById("booking-intro");
-
-  if (success) success.style.display = "block";
-  if (intro) intro.style.display = "none";
-  if (form) form.style.display = "none";
-
-  form.reset();
-
-})
-.catch(function(error){
-  console.log(error);
-  alert("Something went wrong. Please try again.");
-
-});
-const yearEl = document.getElementById("year");
-if (yearEl) {
-  yearEl.textContent = new Date().getFullYear();
-}
+        // SEND CLIENT EMAIL (non-blocking)
+        emailjs.sendForm(
+          "service_o2vdend",
+          "template_906aakh",
+          form,
+          "KBpqTmbWj9Rh0x0X"
+        );
+      })
+      .catch((error) => {
+        console.error("EmailJS error:", error);
+        alert("Submission failed. Please try again.");
+      });
+    });
+  });
 </script>
 
 </body>
