@@ -131,11 +131,13 @@
     emailjs.init("KBpqTmbBWj9Rh0x0X");
   })();
 document.addEventListener("DOMContentLoaded", function () {
+  console.log("JS LOADED");
   const form = document.getElementById("booking-form");
   if (!form) return;
 
   form.addEventListener("submit", function(e){
   e.preventDefault();
+  console.log("FORM SUBMITTED");
 
 
   // ADMIN EMAIL
