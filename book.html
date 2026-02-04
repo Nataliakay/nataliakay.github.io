@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Booking Inquiry | Natalia Kay</title>
-
+  <meta name="robots" content="noindex">
 <meta
   name="description"
   content=content="Submit a private booking inquiry with Natalia Kay. All requests are reviewed personally and handled with discretion."
@@ -99,26 +99,39 @@
 
   </form>
 
-<div id="booking-success" style="display:none;">
-  <h3>Request Received</h3>
+<div id="booking-success" style="display:none;" role="status" aria-live="polite">
+  <h2>Booking Inquiry Submitted</h2>
+
+  <p class="success-confirmation">
+  Your private booking inquiry has been securely received.
+</p>
 
   <p>
-    Thank you for your inquiry.
-  </p>
+  Each inquiry is reviewed individually and handled with care.
+  Privacy, discretion, and respect are always maintained.
+</p>
 
   <p>
-    Your request has been received and is reviewed personally.
-    Privacy and discretion are always respected.
-  </p>
+  If your request is a good fit, you may receive a follow-up message.
+  Response times vary, so please allow time for review.
+</p>
 
-  <p>
-    If approved, you will receive a confirmation email shortly.
-    Please allow time for review.
-  </p>
+  <p class="trust-note">
+  No automated responses are sent. All messages are reviewed personally.
+</p>
 
   <p style="opacity:0.7; font-size:0.9rem; margin-top:20px;">
     Same-day requests should reach out directly as soon as possible.
   </p>
+
+  <p class="success-next">
+  You may now safely close this page.
+</p>
+
+  <p class="visually-hidden">
+  Booking inquiry confirmation page. Private request submitted successfully.
+</p>
+  
 </div>
 
 </section>
