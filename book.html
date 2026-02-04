@@ -124,8 +124,12 @@
 <footer role="contentinfo">
   <p>&copy; <span id="year"></span> Natalia Kay. Discretion always respected.</p>
 </footer>
-
+  
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
+  (function () {
+    emailjs.init("KBpqTmbBWj9Rh0x0X");
+  })();
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("booking-form");
   if (!form) return;
@@ -136,21 +140,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ADMIN EMAIL
   emailjs.sendForm(
+  "service_o2vdend",
+  "template_jgdwjfi", // ADMIN EMAIL
+  form
+)
+.then(function () {
+
+  // CLIENT CONFIRMATION EMAIL
+  return emailjs.sendForm(
     "service_o2vdend",
-    "template_jgdwjfi",
+    "template_906aakh", // CLIENT EMAIL
     form
-  )
-.then(function(){
-  document.getElementById("booking-success").style.display = "block";
-  const intro = document.getElementById("booking-intro");
-if (intro) intro.style.display = "none";
-  form.style.display = "none";
-  form.reset();
+  );
+
 })
-  .catch(function(error){
-    console.log(error);
-    alert("Something went wrong. Please try again.");
-});
+.then(function () {
+
+  // SHOW SUCCESS MESSAGE
+  const success = document.getElementById("booking-success");
+  const intro = document.getElementById("booking-intro");
+
+  if (success) success.style.display = "block";
+  if (intro) intro.style.display = "none";
+  if (form) form.style.display = "none";
+
+  form.reset();
+
+})
+.catch(function(error){
+  console.log(error);
+  alert("Something went wrong. Please try again.");
+
 });
 const yearEl = document.getElementById("year");
 if (yearEl) {
