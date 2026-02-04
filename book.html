@@ -1,138 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Booking Inquiry | Natalia Kay</title>
-  <meta name="robots" content="noindex">
-<meta
-  name="description"
-  content=content="Submit a private booking inquiry with Natalia Kay. All requests are reviewed personally and handled with 
+  <meta charset="UTF-8" />
+  <title>Booking Inquiry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Your existing CSS -->
-  <link rel="stylesheet" href="style.css">
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <style>
+    body {
+      font-family: serif;
+      background: #fdecef;
+      color: #4a2c2a;
+      margin: 0;
+      padding: 0;
+    }
+
+    section {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    form label {
+      display: block;
+      margin-top: 20px;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px;
+      width: 100%;
+      background: #c27c88;
+      color: white;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    #booking-success {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="arrangements.html">Arrangements</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="book.html">Book</a>
-</nav>
+<section id="booking-intro">
+  <h1>Booking Request</h1>
+  <p>Private booking inquiry form. Submissions are reviewed individually.</p>
 
-<section class="booking-section">
-<p class="visually-hidden">
-  Private booking inquiry form for discreet arrangements. Submissions are reviewed individually.
-</p>
-  <!-- NEW UX BLOCK GOES HERE -->
-  <div class="booking-intro" id="booking-intro">
-    <p class="booking-title">Booking Request</p>
-    <p class="booking-subtext">
-      Please complete the form below to submit a private booking inquiry.
-      All requests are reviewed personally and handled with discretion.
-    </p>
-  </div>
-  
   <form id="booking-form">
-    <!-- form fields start here -->
+    <label>Name</label>
+    <input type="text" name="name" required />
 
-    <label>Full Name</label>
-    <input type="text" name="name" required>
-
-    <label>Email Address</label>
-    <input type="email" name="email" required>
-
-    <label>Preferred City / State / Country</label>
-    <input type="text" name="location" placeholder="City, State, Country" required>
-
-    <label>Service Requested</label>
-    <select name="service" required>
-      <option>Dinner Date — 3 Hours (1500)</option>
-      <option>Private Arrangement — 1 Hour (600)</option>
-      <option>Overnight (3500)</option>
-      <option>Fly Me To You — US (6 Hours / 5000)</option>
-      <option>Fly Me To You — International (12 Hours / 10000)</option>
-    </select>
+    <label>Email</label>
+    <input type="email" name="email" required />
 
     <label>Preferred Date</label>
-    <input type="date" name="date" required>
+    <input type="date" name="date" required />
 
     <label>Additional Details</label>
-    <textarea name="message" rows="4" placeholder="Tell me a little about your request"></textarea>
-
-   <p class="policy">
-  A <strong>25% deposit</strong> of the total donation is required to confirm all bookings.
-  Deposits are non-refundable.
-</p>
-
-<p class="policy">
-  Cancellations made 
-  <span class="emphasis-pink">less</span> than <strong>48 hours</strong> prior to the scheduled appointment
-  result in a <strong>50% donation charge</strong>.
-</p>
-
-<p class="policy">
-  Cancellations made 
-  <span class="emphasis-pink">more</span> than <strong>48 hours</strong> in advance may have the deposit
-  applied toward a future scheduled appointment, subject to availability.
-</p>
-
-    <div class="accepted-payments">
-  <div class="payments-label">Accepted Payments</div>
-
-  <div class="payments-links">
-    <a href="https://venmo.com/nataliakayxoxo" target="_blank" rel="noopener">Venmo</a>
-    <a href="https://www.paypal.me/beautykay1" target="_blank" rel="noopener">PayPal</a>
-    <a href="mailto:prettygirlnatalia1@gmail.com">Zelle</a>
-  </div>
+    <textarea name="message" rows="4"></textarea>
 
     <button type="submit">Submit Booking Request</button>
-
   </form>
-
-<div id="booking-success" style="display:none;" role="status" aria-live="polite">
-  <h2>Booking Inquiry Submitted</h2>
-
-  <p class="success-confirmation">
-  Your private booking inquiry has been securely received.
-</p>
-
-  <p>
-  Each inquiry is reviewed individually and handled with care.
-  Privacy, discretion, and respect are always maintained.
-</p>
-
-  <p>
-  If your request is a good fit, you may receive a follow-up message.
-  Response times vary, so please allow time for review.
-</p>
-
-  <p class="trust-note">
-  No automated responses are sent. All messages are reviewed personally.
-</p>
-
-  <p style="opacity:0.7; font-size:0.9rem; margin-top:20px;">
-    Same-day requests should reach out directly as soon as possible.
-  </p>
-
-  <p class="success-next">
-  You may now safely close this page.
-</p>
-
-  <p class="visually-hidden">
-  Booking inquiry confirmation page. Private request submitted successfully.
-</p>
-  
-</div>
-
 </section>
 
-<footer role="contentinfo">
-  <p>&copy; <span id="year"></span> Natalia Kay. Discretion always respected.</p>
+<section id="booking-success" role="status" aria-live="polite">
+  <h2>Booking Inquiry Submitted</h2>
+  <p>Your private booking inquiry has been securely received.</p>
+  <p>Please allow time for review.</p>
+</section>
+
+<footer>
+  <p>&copy; <span id="year"></span> Natalia Kay</p>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>  
+
 <script>
   emailjs.init("UvNOSyDWDZzcZX3F7");
 
@@ -149,29 +101,27 @@
     if (!form) return;
 
     form.addEventListener("submit", function (e) {
-  e.preventDefault();
-  alert("Submit handler fired");
+      e.preventDefault();
 
       emailjs.sendForm(
-  "service_o2vdend",
-  "template_jgdwjfi",
-  form,
-  "UvNOSyDWDZzcZX3F7"
-)
-.then(() => {
-
-  // SUCCESS — only now do UI changes
-  success.style.display = "block";
-  intro.style.display = "none";
-  form.style.display = "none";
-
-})
-.catch((error) => {
-  console.error("EmailJS error:", error);
-  alert("Submission failed. Please try again.");
-});
+        "service_o2vdend",
+        "template_jgdwjfi",
+        form,
+        "UvNOSyDWDZzcZX3F7"
+      )
+      .then(function () {
+        // ✅ SUCCESS ONLY AFTER EMAIL SENDS
+        intro.style.display = "none";
+        success.style.display = "block";
+        form.reset();
+      })
+      .catch(function (error) {
+        console.error("EmailJS error:", error);
+        alert("Submission failed. Please try again.");
+      });
     });
-  
+  });
 </script>
+
 </body>
 </html>
