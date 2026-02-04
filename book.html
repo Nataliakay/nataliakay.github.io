@@ -149,34 +149,27 @@ so<!DOCTYPE html>
     if (!form) return;
 
     form.addEventListener("submit", function (e) {
-      e.preventDefault();
+  e.preventDefault();
+  alert("Submit handler fired");
 
       emailjs.sendForm(
-        "service_o2vdend",
-        "template_jgdwjfi",
-        form,
-        "UvNOSyDWDZzcZX3F7"
-      )
-      .then(() => {
-        // SHOW SUCCESS IMMEDIATELY
-        success.style.display = "block";
-        intro.style.display = "none";
-        form.style.display = "none";
-        
+  "service_o2vdend",
+  "template_jgdwjfi",
+  form,
+  "UvNOSyDWDZzcZX3F7"
+)
+.then(() => {
 
-        // SEND CLIENT EMAIL (non-blocking)
-        emailjs.sendForm(
-          "service_o2vdend",
-          "template_906aakh",
-          form,
-          "UvNOSyDWDZzcZX3F7"
-        );
-        setTimeout(() => form.reset(), 500);
-      })
-      .catch((error) => {
-        console.error("EmailJS error:", error);
-        alert("Submission failed. Please try again.");
-      });
+  // SUCCESS — only now do UI changes
+  success.style.display = "block";
+  intro.style.display = "none";
+  form.style.display = "none";
+
+})
+.catch((error) => {
+  console.error("EmailJS error:", error);
+  alert("Submission failed. Please try again.");
+});
     });
   
 </script>
