@@ -9,6 +9,7 @@
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
   <style>
+    /* ---------- BASE ---------- */
     body {
       font-family: serif;
       background: #fdecef;
@@ -23,38 +24,103 @@
       padding: 40px 20px;
     }
 
+    h1, h2 {
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    /* ---------- FORM ---------- */
     form label {
       display: block;
       margin-top: 20px;
+      font-size: 0.9rem;
     }
 
     form input,
     form textarea {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       margin-top: 6px;
+      font-size: 0.95rem;
+      border: 1px solid #d6b5bb;
+      background: #fff;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      outline: none;
+      border-color: #c27c88;
+      box-shadow: 0 0 0 2px rgba(194,124,136,0.15);
     }
 
     button {
-      margin-top: 30px;
-      padding: 12px;
+      margin-top: 32px;
+      padding: 14px;
       width: 100%;
       background: #c27c88;
       color: white;
       border: none;
       font-size: 1rem;
       cursor: pointer;
+      letter-spacing: 0.5px;
+      transition: background 0.3s ease, transform 0.2s ease, opacity 0.2s ease;
     }
 
+    button:hover {
+      background: #b06a75;
+      transform: translateY(-1px);
+    }
+
+    button:disabled {
+      opacity: 0.6;
+      cursor: default;
+    }
+
+    /* ---------- FX STATES ---------- */
+    .fade-in {
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    .fade-out {
+      animation: fadeOut 0.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeOut {
+      from { opacity: 1; transform: translateY(0); }
+      to { opacity: 0; transform: translateY(-6px); }
+    }
+
+    /* ---------- SUCCESS ---------- */
     #booking-success {
       display: none;
+      text-align: center;
+    }
+
+    #booking-success p {
+      max-width: 520px;
+      margin: 12px auto;
+      line-height: 1.6;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 0.85rem;
+      opacity: 0.75;
     }
   </style>
 </head>
 
 <body>
 
-<section id="booking-intro">
+<section id="booking-intro" class="fade-in">
   <h1>Booking Request</h1>
   <p>Private booking inquiry form. Submissions are reviewed individually.</p>
 
@@ -76,9 +142,9 @@
 </section>
 
 <section id="booking-success" role="status" aria-live="polite">
-  <h2>Booking Inquiry Submitted</h2>
-  <p>Your private booking inquiry has been securely received.</p>
-  <p>Please allow time for review.</p>
+  <h2>Inquiry Received</h2>
+  <p>Your booking request has been securely received.</p>
+  <p>Please allow time for review. You’ll receive a follow-up if approved.</p>
 </section>
 
 <footer>
@@ -93,6 +159,7 @@
     const success = document.getElementById("booking-success");
     const intro = document.getElementById("booking-intro");
     const yearEl = document.getElementById("year");
+    const button = form.querySelector("button");
 
     if (yearEl) {
       yearEl.textContent = new Date().getFullYear();
@@ -102,6 +169,7 @@
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+      button.disabled = true;
 
       emailjs.sendForm(
         "service_o2vdend",
@@ -110,14 +178,19 @@
         "UvNOSyDWDZzcZX3F7"
       )
       .then(function () {
-        // ✅ SUCCESS ONLY AFTER EMAIL SENDS
-        intro.style.display = "none";
-        success.style.display = "block";
-        form.reset();
+        intro.classList.add("fade-out");
+
+        setTimeout(() => {
+          intro.style.display = "none";
+          success.style.display = "block";
+          success.classList.add("fade-in");
+          form.reset();
+        }, 500);
       })
       .catch(function (error) {
         console.error("EmailJS error:", error);
         alert("Submission failed. Please try again.");
+        button.disabled = false;
       });
     });
   });
