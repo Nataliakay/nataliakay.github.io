@@ -93,14 +93,30 @@ h2 {
 /* GALLERY */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin-top: 40px;
 }
 
 .gallery-grid img {
   width: 100%;
-  border-radius: 16px;
   display: block;
+  border-radius: 16px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  will-change: transform;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.01);
+  opacity: 0.95;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-grid img {
+    transition: none;
+  }
 }
 
 /* BOOKING */
