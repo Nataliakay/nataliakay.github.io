@@ -1,4 +1,4 @@
-body {
+7body {
   margin: 0;
   font-family: 'Playfair Display', serif;
   background-color: #fde8f1;
@@ -333,36 +333,58 @@ button {
   text-align: center;
   margin-top: 10px;
 }
-.accepted-payments {
-  margin-top: 20px;
+/* =========================
+   Accepted Payments Section
+   ========================= */
+
+.payment-options {
+  margin-top: 3rem;
   text-align: center;
 }
 
-.payments-label {
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  opacity: 0.7;
-  margin-bottom: 6px;
+.payment-options h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.04em;
 }
 
-.payments-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.payment-item {
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 16px;
-}
+  gap: 0.6rem;
 
-.payments-links a {
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
   text-decoration: none;
-  color: inherit;
-  font-weight: 500;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.payments-links a:hover {
-  text-decoration: underline;
+.payment-item:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.payment-item img {
+  width: 22px;
+  height: 22px;
+}
+
+.payment-item span {
+  font-size: 0.95rem;
+  white-space: nowrap;
 }
 .gallery-footer {
   margin-top: 60px;
