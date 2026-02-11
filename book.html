@@ -159,7 +159,7 @@
   <h1>Booking Request</h1>
   <p>Private booking inquiry form. Submissions are reviewed individually.</p>
 
-  <form id="booking-form" action="javascript:void(0);">
+  <form id="booking-form">
     <label>Name</label>
     <input type="text" name="name" required />
 
@@ -226,7 +226,7 @@
   emailjs.init("UvNOSyDWDZzcZX3F7");
 
   document.addEventListener("DOMContentLoaded", function () {
-
+    const form = document.getElementById("booking-form");
     const success = document.getElementById("booking-success");
     const intro = document.getElementById("booking-intro");
     const yearEl = document.getElementById("year");
