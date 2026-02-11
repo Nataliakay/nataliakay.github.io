@@ -177,11 +177,6 @@ button {
 }
 /* ===== FIX ARRANGEMENTS BACKGROUND ===== */
 
-#arrangements {
-  background-color: #fde8f1;
-  padding: 80px 20px;
-}
-
 #arrangements h2 {
   color: #b86b8c;
 }
@@ -393,10 +388,10 @@ button {
   opacity: 0.9;
 }
 #booking-success {
-  animation: fadeIn 0.6s ease;
+  animation: successFadeIn 0.6s ease;
 }
 
-@keyframes fadeIn {
+@keyframes successFadeIn {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
