@@ -155,11 +155,11 @@
   <a href="gallery.html">Gallery</a>
   <a href="book.html" class="active">Book</a>
 </nav>
-<section id="booking-intro" class="fade-in">
+<section id="book-intro" class="fade-in">
   <h1>Booking Request</h1>
   <p>Private booking inquiry form. Submissions are reviewed individually.</p>
 
-  <form id="booking-form">
+  <form id="book-form">
     <label>Name</label>
     <input type="text" name="name" required />
 
@@ -212,7 +212,7 @@
 </div>
 </section>
 
-<section id="booking-success" role="status" aria-live="polite">
+<section id="book-success" role="status" aria-live="polite">
   <h2>Inquiry Received</h2>
   <p>Your booking request has been securely received.</p>
   <p>Please allow time for review. You’ll receive a follow-up if approved.</p>
@@ -226,9 +226,9 @@
   emailjs.init("UvNOSyDWDZzcZX3F7");
 
   document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("booking-form");
-const success = document.getElementById("booking-success");
-const intro = document.getElementById("booking-intro");
+    const form = document.getElementById("book-form");
+const success = document.getElementById("book-success");
+const intro = document.getElementById("book-intro");
 const yearEl = document.getElementById("year");
 
 if (!form) return;
