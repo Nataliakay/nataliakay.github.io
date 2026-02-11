@@ -239,50 +239,38 @@ const button = form.querySelector("button");
       e.preventDefault();
       button.disabled = true;
 
-      emailjs.send("service_id", "admin_template", formData)
-  .then(function () {
-    return emailjs.send("service_id", "confirmation_template", formData);
-  })
-  .then(function () {
+      Promise.all([
+  emailjs.sendForm(
+    "service_o2vdend",
+    "template_jgdwjfi",
+    form,
+    "UvNOSyDWDZzcZX3F7"
+  ),
+  emailjs.sendForm(
+    "service_o2vdend",
+    "template_9o6aakh",
+    form,
+    "UvNOSyDWDZzcZX3F7"
+  )
+])
+.then(function () {
+  intro.classList.add("fade-out");
+
+  setTimeout(() => {
     intro.style.display = "none";
     form.style.display = "none";
     success.style.display = "block";
-  })
-  .catch(function (error) {
-    console.error("Email failed:", error);
-    alert("There was an error sending your request. Please try again.");
-    button.disabled = false;
-  });
-])
-.then(function () {
-  );
-
-})
-.then(function () {
-
+    success.classList.add("fade-in");
+    form.reset();
+  }, 500);
 })
 .catch(function (error) {
-  console.error("EmailJS error:", error);
+  console.error("Email failed:", error);
+  alert("There was an error sending your request. Please try again.");
   button.disabled = false;
-});
-])
-.then(function () {
-        intro.classList.add("fade-out");
-
-        setTimeout(() => {
-          intro.style.display = "none";
-          success.style.display = "block";
-          success.classList.add("fade-in");
-          form.reset();
-        }, 500);
-      })
-      .catch(function (error) {
-        console.error("EmailJS error:", error);
-        alert("Submission failed. Please try again.");
-        button.disabled = false;
-      });
-    });
   });
+      
+    });
 </script>
 
 </body>
