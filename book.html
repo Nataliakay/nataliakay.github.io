@@ -239,19 +239,21 @@ const button = form.querySelector("button");
       e.preventDefault();
       button.disabled = true;
 
-      emailjs.sendForm(
-  "service_o2vdend",
-  "template_jgdwjfi",   // sends to YOU
-  form,
-  "UvNOSyDWDZzcZX3F7"
-)
-.then(function () {
-
-  return emailjs.sendForm(
+      Promise.all([
+  emailjs.sendForm(
     "service_o2vdend",
-    "template_9o6aakh",   // sends to CLIENT
+    "template_jgdwjfi", // sends to YOU
     form,
     "UvNOSyDWDZzcZX3F7"
+  ),
+  emailjs.sendForm(
+    "service_o2vdend",
+    "template_9o6aakh", // sends to CLIENT
+    form,
+    "UvNOSyDWDZzcZX3F7"
+  )
+])
+.then(function () {
   );
 
 })
