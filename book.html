@@ -227,16 +227,13 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("booking-form");
-    const success = document.getElementById("booking-success");
-    const intro = document.getElementById("booking-intro");
-    const yearEl = document.getElementById("year");
-    const button = form.querySelector("button");
+const success = document.getElementById("booking-success");
+const intro = document.getElementById("booking-intro");
+const yearEl = document.getElementById("year");
 
-    if (yearEl) {
-      yearEl.textContent = new Date().getFullYear();
-    }
+if (!form) return;
 
-    if (!form) return;
+const button = form.querySelector("button");
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
