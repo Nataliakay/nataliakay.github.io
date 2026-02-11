@@ -239,19 +239,29 @@ const button = form.querySelector("button");
       e.preventDefault();
       button.disabled = true;
 
-      Promise.all([
-  emailjs.sendForm(
+      emailjs.sendForm(
+  "service_o2vdend",
+  "template_jgdwjfi",   // sends to YOU
+  form,
+  "UvNOSyDWDZzcZX3F7"
+)
+.then(function () {
+
+  return emailjs.sendForm(
     "service_o2vdend",
-    "template_jgdwjfi", // sends to ME
+    "template_9o6aakh",   // sends to CLIENT
     form,
     "UvNOSyDWDZzcZX3F7"
-  ),
-  emailjs.sendForm(
-    "service_o2vdend",
-    "template_9o6aakh", // sends to CLIENT
-    form,
-    "UvNOSyDWDZzcZX3F7"
-  )
+  );
+
+})
+.then(function () {
+
+})
+.catch(function (error) {
+  console.error("EmailJS error:", error);
+  button.disabled = false;
+});
 ])
 .then(function () {
         intro.classList.add("fade-out");
