@@ -452,10 +452,10 @@ button {
   margin-bottom: 40px;
 }
 
-.payment-note p {
-  font-size: 1rem;
-  line-height: 1.8;
-  margin-bottom: 14px;
+.payment-note {
+  font-size: 0.95rem;   /* or 0.9rem if you want softer */
+  line-height: 1.75;
+  margin-bottom: 12px;
 }
 
 .payment-links a:hover {
