@@ -406,29 +406,51 @@ button {
   white-space: nowrap;
   border: 0;
 }
-/* ===== Payment Section ===== */
+/* ===== Elegant Booking Payment Block ===== */
 
-.payment-options {
+.booking-payments {
+  background-color: #d6a5b8;   /* your pink */
+  padding: 120px 20px;
+  margin-top: 120px;
+}
+
+.booking-payments-inner {
+  max-width: 900px;
+  margin: 0 auto;
   text-align: center;
-  margin: 120px auto 100px auto; /* top and bottom breathing room */
-  max-width: 700px;              /* keeps it elegant and contained */
-  padding: 0 20px;               /* soft side spacing on mobile */
 }
 
-.payment-options h3 {
-  margin-bottom: 25px;
-  font-weight: 500;
+.booking-payments h2 {
+  margin-bottom: 40px;
+  font-weight: 600;
 }
 
-.payment-links {
-  font-size: 1.25rem;
-  letter-spacing: 0.8px;
+.booking-payments .payments {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  margin-bottom: 50px;
 }
 
-.payment-links a {
+.booking-payments .payments a {
   text-decoration: none;
-  color: #4a2c2a;
+  color: #3a2a2a;
   transition: opacity 0.25s ease;
+}
+
+.booking-payments .payments a:hover {
+  opacity: 0.6;
+}
+
+.booking-payments .payments span {
+  margin: 0 18px;
+  opacity: 0.5;
+}
+
+.payment-note {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
 .payment-links a:hover {
