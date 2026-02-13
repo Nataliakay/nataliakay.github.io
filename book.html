@@ -223,57 +223,37 @@
 </footer>
 
 <script>
-  
- (function(){
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Initialize EmailJS
   emailjs.init("UvNOSyDWDZzcZX3F7");
-})();
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("book-form");
-const success = document.getElementById("book-success");
-const intro = document.getElementById("book-intro");
-const yearEl = document.getElementById("year");
+  const form = document.getElementById("book-form");
+  const success = document.getElementById("book-success");
 
-if (!form) return;
+  if (!form) return;
 
-const button = form.querySelector("button");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      button.disabled = true;
-
-      Promise.all([
-  emailjs.sendForm(
-    "service_o2vdend",
-    "template_jgdwjfi",
-    form,
-    "UvNOSyDWDZzcZX3F7"
-  ),
-  emailjs.sendForm(
-    "service_o2vdend",
-    "template_9o6aakh",
-    form,
-    "UvNOSyDWDZzcZX3F7"
-  )
-])
-.then(function () {
-  intro.classList.add("fade-out");
-
-  setTimeout(() => {
-    intro.style.display = "none";
-    form.style.display = "none";
-    success.style.display = "block";
-    success.classList.add("fade-in");
-    form.reset();
-  }, 500);
-})
-.catch(function (error) {
-  console.error("Email failed:", error);
-  alert("There was an error sending your request. Please try again.");
-  button.disabled = false;
-  });
-      
+    emailjs.sendForm(
+      "service_o2vdend",
+      "template_jgdwjfi",
+      form
+    )
+    .then(function () {
+      form.style.display = "none";
+      success.style.display = "block";
+      form.reset();
+    })
+    .catch(function (error) {
+      console.error("Email failed:", error);
+      alert("There was an error sending your request.");
     });
+
+  });
+
+});
 </script>
 
 </body>
