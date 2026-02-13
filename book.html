@@ -216,16 +216,29 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
+    // 1️⃣ Send CLIENT auto-reply
     emailjs.sendForm(
       "service_o2vdend",
-      "template_jgdwjfi",
+      "template_9o6aakh",   // Auto-Reply (client)
       form
     )
+
     .then(function () {
+      // 2️⃣ Send YOUR booking notification
+      return emailjs.sendForm(
+        "service_o2vdend",
+        "template_jgdwjfi", // Contact Us (admin)
+        form
+      );
+    })
+
+    .then(function () {
+      // Only show success after BOTH emails send
       form.style.display = "none";
       success.style.display = "block";
       form.reset();
     })
+
     .catch(function (error) {
       console.error("Email failed:", error);
       alert("There was an error sending your request.");
