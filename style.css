@@ -439,3 +439,30 @@ button {
   margin: 0 14px;  /* more breathing room between words */
   opacity: 0.4;
 }
+/* ===== Gallery Exclusive CTA ===== */
+
+.gallery-footer {
+  text-align: center;
+  margin: 140px auto 120px auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.exclusive-cta {
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.exclusive-cta a {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #4a2c2a;
+  letter-spacing: 0.8px;
+  transition: opacity 0.25s ease;
+}
+
+.exclusive-cta a:hover {
+  opacity: 0.6;
+}
