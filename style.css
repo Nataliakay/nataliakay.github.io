@@ -446,15 +446,16 @@ button {
   opacity: 0.5;
 }
 
-.payment-note {
-  max-width: 700px;
-  margin: 0 auto;
+.booking-payments .payments {
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 40px;
 }
 
 .payment-note p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 18px;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 14px;
 }
 
 .payment-links a:hover {
