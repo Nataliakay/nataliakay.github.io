@@ -493,36 +493,56 @@ button {
 .exclusive-cta a:hover {
   opacity: 0.6;
 }
-/* Social Section */
+/* ===== Social Section Upgrade ===== */
 
 .social-section {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 .social-heading {
-  font-family: 'Playfair Display', cursive;
-  font-weight: bold;
-  font-size: 1.3rem;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.6rem;
   color: #d78ca3; /* soft pink */
-  margin-bottom: 18px;
+  margin-bottom: 22px;
+  letter-spacing: 0.5px;
 }
 
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 35px;
   flex-wrap: wrap;
 }
 
 .social-links a {
-  font-family: 'Playfair Display', cursive;
-  font-size: 1.05rem; /* slightly smaller than body */
-  color: #000;
-  text-decoration: none;
-  transition: opacity 0.3s ease;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: #000 !important;   /* FORCE black */
+  text-decoration: none !important;  /* remove underline */
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Soft underline animation */
+.social-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  left: 0;
+  bottom: -4px;
+  background-color: #d78ca3;
+  transition: width 0.3s ease;
 }
 
 .social-links a:hover {
-  opacity: 0.6;
+  color: #000;
+}
+
+.social-links a:hover::after {
+  width: 100%;
 }
