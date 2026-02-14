@@ -29,29 +29,64 @@
 </p>
     <div class="rates-grid">
       
-<div class="rate-card">
+<div class="arrangement-card" onclick="toggleDetails(this)">
   <h3>Hourly</h3>
-  <div class="price">$600 usd</div>
-<div class="details">1 hour</div>
+  <p class="price">$600 usd</p>
+  <p class="duration">1 hour</p>
+
+  <div class="arrangement-details">
+    <p>
+      An intimate hour designed for effortless chemistry and refined connection.
+      Perfect for a private meeting or a discreet escape from routine. Warm
+      conversation, genuine presence, and a naturally captivating energy —
+      all wrapped into a beautifully elevated experience.
+    </p>
+  </div>
 </div>
       
-      <div class="rate-card">
-        <h3>Dinner Date</h3>
-        <div class="price">$1,500 usd</div>
-        <div class="details">3 hours</div>
-      </div>
+      <div class="arrangement-card" onclick="toggleDetails(this)">
+  <h3>Dinner Date</h3>
+  <p class="price">$1,500 usd</p>
+  <p class="duration">3 hours</p>
 
-      <div class="rate-card">
-        <h3>Fly Me To You (U.S.)</h3>
-        <div class="price">$5,000 usd</div>
-        <div class="details">6 hours</div>
-      </div>
+  <div class="arrangement-details">
+    <p>
+      An elegant evening curated for ambiance and connection. From candlelit
+      dining to rooftop views, this experience blends charm, sophistication,
+      and attentive presence into a seamless and unforgettable night.
+    </p>
+  </div>
+</div>
 
-      <div class="rate-card">
-        <h3>Fly Me To You (International)</h3>
-        <div class="price">$10,000 usd</div>
-        <div class="details">12 hours</div>
-      </div>
+      <div class="arrangement-card" onclick="toggleDetails(this)">
+  <h3>Fly Me To You (U.S.)</h3>
+  <p class="price">$5,000 usd</p>
+  <p class="duration">6 hours</p>
+
+  <div class="arrangement-details">
+    <p>
+      A more immersive engagement designed for those who desire time to truly
+      unwind and savor each moment. Ideal for special events, private escapes,
+      and refined experiences within the U.S., always approached with discretion
+      and elegance.
+    </p>
+  </div>
+</div>
+
+      <div class="arrangement-card" onclick="toggleDetails(this)">
+  <h3>Fly Me To You (International)</h3>
+  <p class="price">$10,000 usd</p>
+  <p class="duration">12 hours</p>
+
+  <div class="arrangement-details">
+    <p>
+      A fully immersive luxury experience curated for select international
+      destinations. Perfect for exclusive travel, extended companionship, and
+      unforgettable moments abroad — seamlessly coordinated with sophistication
+      and discretion.
+    </p>
+  </div>
+</div>
 
     </div>
 
@@ -104,5 +139,10 @@
 </p>
 
 </section>
+  <script>
+function toggleDetails(card) {
+  card.classList.toggle("active");
+}
+</script>
 </body>
 </html>
