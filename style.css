@@ -604,3 +604,29 @@ section.social-section .social-links a:hover {
   background-color: #000;
   color: #fff !important;
 }
+.arrangement-card {
+  background: #fff;
+  padding: 40px 30px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.arrangement-card:hover {
+  transform: translateY(-5px);
+}
+
+.arrangement-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+  margin-top: 15px;
+}
+
+.arrangement-card.active .arrangement-details {
+  max-height: 500px;
+  opacity: 1;
+}
