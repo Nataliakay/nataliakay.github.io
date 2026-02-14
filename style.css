@@ -493,3 +493,36 @@ button {
 .exclusive-cta a:hover {
   opacity: 0.6;
 }
+/* Social Section */
+
+.social-section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.social-heading {
+  font-family: 'Playfair Display', cursive;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #d78ca3; /* soft pink */
+  margin-bottom: 18px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  font-family: 'Playfair Display', cursive;
+  font-size: 1.05rem; /* slightly smaller than body */
+  color: #000;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.social-links a:hover {
+  opacity: 0.6;
+}
