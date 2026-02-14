@@ -564,3 +564,43 @@ section.social-section .social-links a {
 section.social-section .social-links a:hover {
   opacity: 0.6 !important;
 }
+/* ===== SOCIAL BUTTON STYLE ===== */
+
+.social-section {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 120px; /* breathing room at bottom */
+  padding-top: 20px;
+}
+
+.social-heading {
+  color: #d78ca3 !important;
+  font-style: italic !important;
+  font-weight: 600 !important;
+  font-size: 1.8rem;
+  margin-bottom: 35px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  font-style: italic;
+  color: #000 !important;
+  text-decoration: none !important;
+  padding: 10px 22px;
+  border: 1px solid #000;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Soft hover */
+.social-links a:hover {
+  background-color: #000;
+  color: #fff !important;
+}
