@@ -701,3 +701,13 @@ button[type="submit"]:hover {
   background: #fff;
   color: #000;
 }
+#city {
+  width: 60%;
+  max-width: 300px;
+}
+
+@media (max-width: 768px) {
+  #city {
+    width: 100%;
+  }
+}
