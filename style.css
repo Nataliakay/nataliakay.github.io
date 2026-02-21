@@ -711,3 +711,39 @@ button[type="submit"]:hover {
     width: 100%;
   }
 }
+.online-services {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.online-services h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.service-item {
+  padding: 25px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-header h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.price {
+  font-weight: 600;
+}
+
+.service-item p {
+  margin-top: 10px;
+  font-style: italic;
+  color: #666;
+}
