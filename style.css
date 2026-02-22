@@ -1,7 +1,18 @@
+/* =========================
+   COLOR SYSTEM
+   ========================= */
+:root {
+  --pink-primary: #b86b8c;
+  --pink-soft: #d78ca3;
+  --pink-light: #fde8f1;
+  --pink-block: #d6a5b8;
+  --pink-footer: #f5c1d9;
+  --pink-primary-rgb: 184, 107, 140;
+}
 body {
   margin: 0;
   font-family: 'Playfair Display', serif;
-  background-color: #fde8f1;
+  background-color: var(--pink-light);
   color: #3b2c35;
 
   opacity: 0;
@@ -27,7 +38,7 @@ nav {
 nav a {
   margin: 0 15px;
   text-decoration: none;
-  color: #b86b8c;
+  color: var(--pink-primary);
   font-weight: bold;
 }
 
@@ -65,7 +76,7 @@ section {
 
 h2 {
   text-align: center;
-  color: #b86b8c;
+ color: var(--pink-primary);
   margin-bottom: 30px;
 }
 
@@ -134,7 +145,7 @@ label {
 
 /* SITE BOTTOM – PAYMENTS */
 .site-bottom {
-  background-color: #f5c1d9;
+  background-color: var(--pink-footer);
   padding: 30px 20px;
   text-align: center;
 }
@@ -156,13 +167,13 @@ label {
 /* ===== RATES PAGE FIX ===== */
 
 #arrangements {
-  background-color: #fde8f1;
+ background-color: var(--pink-light);
   padding: 70px 20px;
 }
 
 #arrangements h2 {
   text-align: center;
-  color: #b86b8c;
+  color: var(--pink-primary);
   font-family: 'Playfair Display', serif;
   margin-bottom: 40px;
 }
@@ -182,11 +193,11 @@ label {
   border-radius: 18px;
   padding: 30px;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(184, 107, 140, 0.15);
+  box-shadow: 0 10px 25px rgba(var(--pink-primary-rgb), 0.15);
 }
 
 .rate-card h3 {
-  color: #b86b8c;
+  color: var(--pink-primary);
   font-family: 'Playfair Display', serif;
   margin-bottom: 15px;
 }
@@ -216,11 +227,11 @@ label {
 
 /* Highlight policy keywords */
 .policy-highlight {
-  color: #b86b8c;
+color: var(--pink-primary);
   font-weight: bold;
 }
 .emphasis-pink {
-  color: #b86b8c;
+  color: var(--pink-primary);
   font-weight: bold;
 }
 /* =========================
@@ -369,7 +380,7 @@ label {
 /* ===== Elegant Booking Payment Block ===== */
 
 .booking-payments {
-  background-color: #d6a5b8;   /* your pink */
+ background-color: var(--pink-block);   /* your pink */
   padding: 120px 20px;
   margin-top: 120px;
 }
@@ -458,7 +469,7 @@ label {
 }
 
 .social-heading {
-  color: #d78ca3;
+  color: var(--pink-soft);
   font-style: italic;
   font-weight: 600;
   font-size: 1.8rem;
@@ -571,7 +582,7 @@ button[type="submit"] {
   width: 100%;
   padding: 16px;
   margin-top: 12px;
-  background-color: #b86b8c;   /* darker pink */
+  background-color: var(--pink-primary);
   color: #ffffff;
   border: none;
   border-radius: 30px;
