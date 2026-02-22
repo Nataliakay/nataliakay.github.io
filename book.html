@@ -2,150 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Booking Inquiry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking Inquiry</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 
   <!-- EmailJS -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>
-    /* ---------- BASE ---------- */
-    body {
-  font-family: 'Playfair Display', serif;
-      background: #fdecef;
-      color: #4a2c2a;
-      margin: 0;
-      padding: 0;
-    }
-
-    section {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    h1, h2 {
-      font-weight: 500;
-      letter-spacing: 0.5px;
-    }
-
-/* -------- NAV -------- */
-.site-nav {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 20px 0;
-  background: #fff;
-  border-bottom: 1px solid rgba(194, 124, 136, 0.15);
-}
-
-.site-nav a {
-  text-decoration: none;
-  color: #c27c88;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-}
-
-.site-nav a:hover {
-  opacity: 0.7;
-}
-
-.site-nav a.active {
-  border-bottom: 1px solid #c27c88;
-}
-  
-    /* ---------- FORM ---------- */
-    form label {
-      display: block;
-      margin-top: 20px;
-      font-size: 0.9rem;
-    }
-
-    form input,
-    form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-top: 6px;
-      font-size: 0.95rem;
-      border: 1px solid #d6b5bb;
-      background: #fff;
-      transition: border-color 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    form input:focus,
-    form textarea:focus {
-      outline: none;
-      border-color: #c27c88;
-      box-shadow: 0 0 0 2px rgba(194,124,136,0.15);
-    }
-
-    button {
-      margin-top: 32px;
-      padding: 14px;
-      width: 100%;
-      background: #c27c88;
-      color: white;
-      border: none;
-      font-size: 1rem;
-      cursor: pointer;
-      letter-spacing: 0.5px;
-      transition: background 0.3s ease, transform 0.2s ease, opacity 0.2s ease;
-    }
-
-    button:hover {
-      background: #b06a75;
-      transform: translateY(-1px);
-    }
-
-    button:disabled {
-      opacity: 0.6;
-      cursor: default;
-    }
-
-    /* ---------- FX STATES ---------- */
-    .fade-in {
-      animation: fadeIn 0.8s ease forwards;
-    }
-
-    .fade-out {
-      animation: fadeOut 0.5s ease forwards;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeOut {
-      from { opacity: 1; transform: translateY(0); }
-      to { opacity: 0; transform: translateY(-6px); }
-    }
-
-    /* ---------- SUCCESS ---------- */
-    #book-success {
-      display: none;
-      text-align: center;
-    }
-
-    #book-success p {
-      max-width: 520px;
-      margin: 12px auto;
-      line-height: 1.6;
-    }
-
-    /* ---------- FOOTER ---------- */
-    footer {
-      text-align: center;
-      padding: 30px 10px;
-      font-size: 0.85rem;
-      opacity: 0.75;
-    }
-  </style>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 
 <body>
