@@ -851,3 +851,16 @@ button[type="submit"]:hover {
 .social-links a:hover {
   opacity: 0.6;
 }
+/* Fix nav wrapping on booking page */
+.site-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: nowrap;   /* prevents wrapping */
+  overflow-x: auto;    /* allows scroll instead of breaking */
+}
+
+.site-nav a {
+  white-space: nowrap; /* prevents "Online Services" from splitting */
+}
