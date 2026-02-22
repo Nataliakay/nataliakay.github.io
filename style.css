@@ -56,7 +56,7 @@ header p {
   font-size: 1.3rem;
 }
 
-/* SECTIONS */ l
+/* SECTIONS */
 section {
   padding: 70px 20px;
   max-width: 900px;
@@ -84,7 +84,7 @@ h2 {
   text-align: center;
 }
 
-.rates p {.
+.rates p {
   font-size: 1.1rem;
   margin: 18px 0;
   color: #3b2c35;
@@ -164,7 +164,7 @@ button {
 .bottom-title {
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 10px;.
+  margin-bottom: 10px;
   color: #3b2c35;
 }
 
@@ -710,11 +710,6 @@ button[type="submit"]:hover {
   #city {
     width: 100%;
   }
-}
-.online-services {
-  max-width: 700px;
-  margin: 80px auto;
-  padding: 0 20px;
 }
 
 .online-services h1 {
