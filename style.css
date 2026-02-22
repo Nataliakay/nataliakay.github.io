@@ -818,3 +818,36 @@ button[type="submit"]:hover {
   border-radius: 30px;
   border: 1px solid rgba(0,0,0,0.1);
 }
+/* Social Section */
+.social-section {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.social-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #3e2b2b;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #3e2b2b;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: opacity 0.3s ease;
+}
+
+.social-links a:hover {
+  opacity: 0.6;
+}
