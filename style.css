@@ -132,28 +132,6 @@ label {
   font-weight: bold;
 }
 
-input,
-select {
-  width: 100%;
-  padding: 12px;
-  margin-top: 6px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-family: 'Playfair Display', serif;
-}
-
-button {
-  margin-top: 25px;
-  width: 100%;
-  padding: 15px;
-  background: #b86b8c;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  font-size: 1.1rem;
-  cursor: pointer;
-}
-
 /* SITE BOTTOM – PAYMENTS */
 .site-bottom {
   background-color: #f5c1d9;
@@ -276,16 +254,9 @@ button {
   /* Mobile-friendly section spacing */
   .content-section {
   padding: 80px 16px;
-}
-
-  /* Improve button tap size */
-  button {
-    width: 100%;
-    padding: 14px;
-    font-size: 1rem;
   }
-
 }
+
 .hero {
   padding: 120px 20px 100px;
 }
@@ -423,12 +394,6 @@ button {
 .booking-payments h2 {
   margin-bottom: 40px;
   font-weight: 600;
-}
-
-.booking-payments .payments {
-  font-size: 1.6rem;
-  letter-spacing: 1px;
-  margin-bottom: 50px;
 }
 
 .booking-payments .payments a {
@@ -804,31 +769,4 @@ button[type="submit"]:hover {
   padding: 10px 20px;
   border-radius: 30px;
   border: 1px solid rgba(0,0,0,0.1);
-}
-/* Social Section */
-
-.social-heading {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  margin-bottom: 25px;
-  color: #3e2b2b;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.social-links a {
-  text-decoration: none;
-  color: #3e2b2b;
-  font-weight: 500;
-  letter-spacing: 1px;
-  transition: opacity 0.3s ease;
-}
-
-.social-links a:hover {
-  opacity: 0.6;
 }
