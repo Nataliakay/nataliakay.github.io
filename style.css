@@ -783,3 +783,32 @@ button[type="submit"]:hover {
 .price {
   font-weight: 600;
 }
+/* ===== Online Payment Section ===== */
+
+.online-payments {
+  text-align: center;
+  margin-top: 80px;
+  padding: 50px 30px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.online-payments h2 {
+  margin-bottom: 25px;
+}
+
+.payments a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.payments a:hover {
+  opacity: 0.6;
+}
+
+.payment-note {
+  margin-top: 25px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
