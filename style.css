@@ -812,3 +812,9 @@ button[type="submit"]:hover {
   font-size: 0.9rem;
   opacity: 0.8;
 }
+.payments a {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 1px solid rgba(0,0,0,0.1);
+}
