@@ -733,10 +733,6 @@ button[type="submit"]:hover {
   font-weight: 600;
 }
 
-.price {
-  font-weight: 600;
-}
-
 .service-item p {
   margin-top: 10px;
   font-style: italic;
@@ -775,9 +771,6 @@ button[type="submit"]:hover {
   margin: 0;
 }
 
-.price {
-  font-weight: 600;
-}
 /* ===== Online Payment Section ===== */
 
 .online-payments {
@@ -791,12 +784,6 @@ button[type="submit"]:hover {
   margin-bottom: 25px;
 }
 
-.payments a {
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: opacity 0.3s ease;
-}
 
 .payments a:hover {
   opacity: 0.6;
@@ -808,18 +795,16 @@ button[type="submit"]:hover {
   opacity: 0.8;
 }
 .payments a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
   display: inline-block;
   padding: 10px 20px;
   border-radius: 30px;
   border: 1px solid rgba(0,0,0,0.1);
 }
 /* Social Section */
-.social-section {
-  text-align: center;
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-}
 
 .social-heading {
   font-family: 'Playfair Display', serif;
