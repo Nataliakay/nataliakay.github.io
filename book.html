@@ -236,11 +236,13 @@ document.addEventListener("DOMContentLoaded", function () {
       );
     })
 
-    .then(function () {
-      form.style.display = "none";
-      success.style.display = "block";
-      form.reset();
-    })
+   .then(function () {
+  form.style.display = "none";
+  success.classList.add("show");
+  form.reset();
+
+  success.scrollIntoView({ behavior: "smooth", block: "center" });
+})
 
     .catch(function (error) {
       console.error("Email failed:", error);
