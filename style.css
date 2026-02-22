@@ -684,3 +684,12 @@ button[type="submit"]:hover {
   border-radius: 30px;
   border: 1px solid rgba(0,0,0,0.1);
 }
+/* Booking page spacing adjustment */
+#book-intro {
+  padding-top: 30px;
+}
+@media (max-width: 768px) {
+  #book-intro {
+    padding-top: 20px;
+  }
+}
