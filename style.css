@@ -1,3 +1,10 @@
+/* GLOBAL LAYOUT FIX */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* =========================
    COLOR SYSTEM
    ========================= */
