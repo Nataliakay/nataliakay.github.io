@@ -352,12 +352,6 @@ label {
   font-size: 0.95rem;
   white-space: nowrap;
 }
-.gallery-footer {
-  margin-top: 60px;
-  padding: 30px 0;
-  text-align: center;
-  opacity: 0.9;
-}
 #book-success {
   animation: successFadeIn 0.6s ease;
 }
@@ -457,77 +451,7 @@ label {
 
 .exclusive-cta a:hover {
   opacity: 0.6;
-}
-/* ===== Social Section Upgrade ===== */
-
-.social-section {
-  text-align: center;
-  margin-top: 60px;
-}
-
-.social-heading {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-weight: 600;
-  font-size: 1.6rem;
-  color: #d78ca3; /* soft pink */
-  margin-bottom: 22px;
-  letter-spacing: 0.5px;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 35px;
-  flex-wrap: wrap;
-}
-
-.social-links a {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 1.15rem;
-  color: #000 !important;   /* FORCE black */
-  text-decoration: none !important;  /* remove underline */
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-/* Soft underline animation */
-.social-links a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 1px;
-  left: 0;
-  bottom: -4px;
-  background-color: #d78ca3;
-  transition: width 0.3s ease;
-}
-
-.social-links a:hover {
-  color: #000;
-}
-
-.social-links a:hover::after {
-  width: 100%;
-}
-/* ===== SOCIAL SECTION FINAL FIX ===== */
-
-section.social-section h3.social-heading {
-  color: #d78ca3 !important;
-  font-style: italic !important;
-  font-weight: 600 !important;
-}
-
-section.social-section .social-links a {
-  color: #000 !important;
-  text-decoration: none !important;
-  font-style: italic !important;
-  font-weight: 500 !important;
-}
-
-section.social-section .social-links a:hover {
-  opacity: 0.6 !important;
+  
 }
 /* ===== SOCIAL BUTTON STYLE ===== */
 
